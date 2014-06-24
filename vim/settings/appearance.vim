@@ -6,8 +6,7 @@ set cursorline
 let s:myTheme='molokai'
 exec 'colorscheme ' . s:myTheme
 
-" If there's a custom airline theme too, load it. Otherwise load the
-" solarized one just so it won't look very bad.
+" If there's a custom airline theme too, load it.
 let s:airlineCustom="~/.vim/custom-settings/colors/" . s:myTheme . "-airline.vim"
 if filereadable(expand(s:airlineCustom))
     exec "au VimEnter * so " . s:airlineCustom
