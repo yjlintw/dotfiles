@@ -98,6 +98,7 @@ NeoBundle "xsunsmile/showmarks.git"
 NeoBundle "MarcWeber/vim-addon-local-vimrc"
 
 " Text objects
+NeoBundle "gcmt/wildfire.vim"
 NeoBundle "austintaylor/vim-indentobject"
 NeoBundle "coderifous/textobj-word-column.vim"
 NeoBundle "kana/vim-textobj-datetime"
