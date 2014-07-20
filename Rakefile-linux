@@ -163,7 +163,7 @@ def install_fonts
   puts "Installing patched fonts for Powerline."
   puts "======================================================"
   run %{ mkdir -p $HOME/.fonts }
-  run %{ cp -f $HOME/.yadr/fonts/* $HOME/.fonts }
+  run %{ cp -f $HOME/.yadr/fonts/* $HOME/.fonts && fc-cache -vf $HOME/.fonts }
   puts
 end
 
