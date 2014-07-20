@@ -18,7 +18,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch "Shougo/neobundle.vim"
 
 " Other languages
-NeoBundle "briancollins/vim-jst"
 NeoBundle "guileen/vim-node"
 NeoBundle "pangloss/vim-javascript"
 
