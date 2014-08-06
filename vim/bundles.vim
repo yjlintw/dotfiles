@@ -18,6 +18,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch "Shougo/neobundle.vim"
 
 " Other languages
+NeoBundle "briancollins/vim-jst"
 NeoBundle "guileen/vim-node"
 NeoBundle "pangloss/vim-javascript"
 
@@ -112,6 +113,7 @@ NeoBundle "vim-scripts/argtextobj.vim"
 NeoBundle "othree/javascript-libraries-syntax.vim"
 
 " Cosmetics, color scheme, Airline...
+NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "chrisbra/color_highlight.git"
 NeoBundle "tomasr/molokai"
 " NeoBundle "chriskempson/base16-vim"
