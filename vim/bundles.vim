@@ -35,7 +35,6 @@ NeoBundle "skwp/vim-html-escape"
 
 " Git related...
 NeoBundle "idanarye/vim-merginal"
-NeoBundle "jaxbot/github-issues.vim"
 NeoBundle "gregsexton/gitv"
 NeoBundle "mattn/gist-vim"
 NeoBundle "tjennings/git-grep-vim"
