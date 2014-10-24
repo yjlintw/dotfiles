@@ -8,6 +8,7 @@ vim/tmp
 vim/spell
 vim/after/.vimrc.after
 vim/.bundles.local
+vim/.bundles.local.bak
 vim/bundle
 .netrwhist
 bin/subl
