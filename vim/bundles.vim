@@ -59,7 +59,7 @@ NeoBundle "tpope/vim-bundler"
 NeoBundle "vim-scripts/IndexedSearch"
 NeoBundle "vim-scripts/camelcasemotion.git"
 NeoBundle "vim-scripts/matchit.zip.git"
-NeoBundle "terryma/vim-multiple-cursors"
+NeoBundle "kristijanhusak/vim-multiple-cursors"
 
 " General vim improvements
 NeoBundle 'Shougo/vimproc', {
