@@ -26,6 +26,7 @@ alias psr='ps aux | grep ruby'
 
 # Moving around
 alias cdb='cd -'
+alias cls='clear;ls'
 
 # Show human friendly numbers and colors
 alias df='df -h'
@@ -174,3 +175,6 @@ alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Homebrew
+alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'

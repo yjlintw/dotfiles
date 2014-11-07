@@ -21,6 +21,9 @@
 
   # branch
   b = branch -v                     # branch (verbose)
+  ren-remote = "!f() { git push origin origin/$1:refs/heads/$2 :$1; } ; f"
+  ren-local = branch -m
+  ren = !git ren-local $1 $2 && git ren-remote $1 $2
 
   # commit
   c = commit -m                     # commit with message
@@ -91,6 +94,7 @@
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
   prompt = false
+  keepBackup = false
 [mergetool "gvimdiff"]
   cmd="gvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
   keepbackup=false

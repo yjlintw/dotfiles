@@ -12,7 +12,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/neobundle.vim/
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " let NeoBundle manage NeoBundle (required)
 NeoBundleFetch "Shougo/neobundle.vim"
@@ -34,10 +34,8 @@ NeoBundle "skwp/vim-html-escape"
 " NeoBundle "tpope/vim-haml"
 
 " Git related...
-NeoBundle "idanarye/vim-merginal"
-NeoBundle "jaxbot/github-issues.vim"
-NeoBundle "gregsexton/gitv"
-NeoBundle "mattn/gist-vim"
+" NeoBundle "idanarye/vim-merginal"
+" NeoBundle "gregsexton/gitv"
 NeoBundle "tjennings/git-grep-vim"
 NeoBundle "tpope/vim-fugitive"
 NeoBundle "tpope/vim-git"
@@ -61,7 +59,7 @@ NeoBundle "tpope/vim-bundler"
 NeoBundle "vim-scripts/IndexedSearch"
 NeoBundle "vim-scripts/camelcasemotion.git"
 NeoBundle "vim-scripts/matchit.zip.git"
-NeoBundle "terryma/vim-multiple-cursors"
+NeoBundle "kristijanhusak/vim-multiple-cursors"
 
 " General vim improvements
 NeoBundle 'Shougo/vimproc', {
@@ -82,7 +80,6 @@ NeoBundle "mattn/webapi-vim.git"
 NeoBundle "scrooloose/nerdtree.git"
 NeoBundle "scrooloose/syntastic.git"
 NeoBundle "sjl/gundo.vim"
-NeoBundle "skwp/YankRing.vim"
 NeoBundle "skwp/greplace.vim"
 NeoBundle "tomtom/tlib_vim.git"
 NeoBundle "tpope/vim-abolish"
@@ -129,6 +126,8 @@ endif
 if filereadable(expand("~/.yadr/vim/.bundles.local"))
   source ~/.yadr/vim/.bundles.local
 endif
+
+call neobundle#end()
 
 "Filetype plugin indent on is required by NeoBundle
 filetype plugin indent on
