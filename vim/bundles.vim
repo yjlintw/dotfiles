@@ -18,27 +18,20 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch "Shougo/neobundle.vim"
 
 " Other languages
-NeoBundle "briancollins/vim-jst"
+NeoBundle "sheerun/vim-polyglot"
 NeoBundle "guileen/vim-node"
-NeoBundle "pangloss/vim-javascript"
 
 " Html, Xml, Css, Markdown...
-" NeoBundle "groenewege/vim-less.git"
-NeoBundle "jtratner/vim-flavored-markdown.git"
-NeoBundle "juvenn/mustache.vim.git"
+" NeoBundle "jtratner/vim-flavored-markdown.git"
 NeoBundle "tristen/vim-sparkup"
 NeoBundle "nelstrom/vim-markdown-preview"
 NeoBundle "skwp/vim-html-escape"
-" NeoBundle "slim-template/vim-slim.git"
-" NeoBundle "timcharper/textile.vim.git"
-" NeoBundle "tpope/vim-haml"
 
 " Git related...
 " NeoBundle "idanarye/vim-merginal"
 " NeoBundle "gregsexton/gitv"
 NeoBundle "tjennings/git-grep-vim"
 NeoBundle "tpope/vim-fugitive"
-NeoBundle "tpope/vim-git"
 
 " General text editing improvements...
 NeoBundle "lfilho/cosco.vim"
