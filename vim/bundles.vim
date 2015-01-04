@@ -108,6 +108,9 @@ NeoBundle "tomasr/molokai"
 " NeoBundle "chriskempson/base16-vim"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "vim-scripts/TagHighlight.git"
+" Required for Gblame in terminal vim
+NeoBundle "godlygeek/csapprox.git"
+
 if system('uname')=~'Darwin'
     NeoBundle "zerowidth/vim-copy-as-rtf"
 endif
