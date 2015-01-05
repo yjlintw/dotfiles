@@ -8,11 +8,11 @@
     # Yet Another Dotfile Repo - Marelo version
 
     OSX install:
-    sh -c "`curl -fsSL https://raw.github.com/lfilho/dotfiles/master/install.sh`"
+    sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
 
     Linux install:
     sudo apt-get install git
-    wget -O - https://raw.github.com/lfilho/dotfiles/master/install-linux.sh | bash
+    wget -O - https://raw.githubusercontent.com/lfilho/dotfiles/master/install-linux.sh | bash
 
 To get to know this project, please first refer to the [original project](https://github.com/skwp/dotfiles), read their README and then come back to this one :-)
 
@@ -25,7 +25,7 @@ Here are the differences with the upstream repo:
     * More javascript goodies for vim (my main dev language atm):
       * More elements highlighted
       * [NodeJS Dictionary](http://github.com/guileen/vim-node) + neocomplete hook
-      * [Javascript Dictionary](https://raw.github.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + neocomplete hook
+      * [Javascript Dictionary](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + neocomplete hook
       * [Cosco.vim](http://github.com/lfilho/cosco.vim) for comma and semi-colon insertion bliss
     * [NeoBundle](https://github.com/Shougo/neobundle.vim) instead of Vundle
     * [NeoComplete](https://github.com/Shougo/neocomplete.vim) instead NeoComplcache
