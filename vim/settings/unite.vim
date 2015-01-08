@@ -1,6 +1,8 @@
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom#source('file_mru', 'max_candidates', 5)
 call unite#custom#source('file_rec/async', 'max_candidates', 15)
+call unite#custom#source('file_mru,file_rec,file_rec/async,grep,locate',
+  \ 'ignore_pattern', join(['\.git/', 'tmp/', 'bundle/', 'node_modules/'], '\|'))
 
 let g:unite_source_history_yank_enable = 1
 nnoremap <leader>yh :<C-u>Unite -buffer-name=yank history/yank<cr>
