@@ -1,7 +1,7 @@
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#custom#source('file_mru', 'max_candidates', 5)
 call unite#custom#source('file_rec/async', 'max_candidates', 15)
-call unite#custom#source('file_mru,file_rec,file_rec/async,grep,locate',
+call unite#custom#source('file_mru,file_rec,file_rec/async,file_rec/git,grep,locate',
   \ 'ignore_pattern', join(['\.git/', 'tmp/', 'bundle/', 'node_modules/'], '\|'))
 
 let g:unite_source_history_yank_enable = 1
@@ -23,8 +23,8 @@ endfunction
 
 nnoremap ,ur :UniteResume<CR>
 
-nnoremap ,t :Unite -start-insert -buffer-name=files file_mru file_rec/async:!<CR>
-vnoremap ,t "zy:<C-u>Unite -input=<C-R>z -start-insert -buffer-name=files file_mru file_rec/async:!<CR>
+nnoremap ,t :Unite -start-insert -buffer-name=files file_mru file_rec/git<CR>
+vnoremap ,t "zy:<C-u>Unite -input=<C-R>z -start-insert -buffer-name=files file_mru file_rec/git<CR>
 
 "
 " Buffer listing/switching (mnemonic: Unite Buffers)
