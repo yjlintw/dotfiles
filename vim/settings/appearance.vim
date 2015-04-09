@@ -40,8 +40,10 @@ if has("gui_running")
 
     if has("gui_gtk2")
         set guifont=FantasqueSansMono-Regular 17,Monaco\ for\ Powerline 13,Monaco 13,Inconsolata\ XL 17,Inconsolata 20
+        set linespace=3
     else
         set guifont=FantasqueSansMono-Regular:h17,Monaco\ for\ Powerline:h13,Monaco:h13,Inconsolata\ XL:h17,Inconsolata:h20
+        set linespace=3
     end
 else
     "dont load csapprox if we no gui support - silences an annoying warning
