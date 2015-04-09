@@ -39,9 +39,9 @@ if has("gui_running")
     autocmd VimEnter * set guitablabel=%N:\ %t\ %M
 
     if has("gui_gtk2")
-        set guifont=Monaco\ for\ Powerline 13,Monaco 13,Inconsolata\ XL 17,Inconsolata 20
+        set guifont=FantasqueSansMono-Regular 17,Monaco\ for\ Powerline 13,Monaco 13,Inconsolata\ XL 17,Inconsolata 20
     else
-        set guifont=Monaco\ for\ Powerline:h13,Monaco:h13,Inconsolata\ XL:h17,Inconsolata:h20
+        set guifont=FantasqueSansMono-Regular:h17,Monaco\ for\ Powerline:h13,Monaco:h13,Inconsolata\ XL:h17,Inconsolata:h20
     end
 else
     "dont load csapprox if we no gui support - silences an annoying warning
