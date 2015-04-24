@@ -154,7 +154,7 @@ def install_homebrew
   puts "Installing Homebrew packages (there may be some warnings):"
   puts "=========================================================="
   puts "zsh, ctags, git, hub, tmux, reattach-to-user-namespace, the_silver_searcher, macvim (with custom file icons and lua interface support)"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher}
+  run %{brew install zsh ctags git hub ghi tmux reattach-to-user-namespace the_silver_searcher}
   # Installing MacVim with lua support and customs file icons
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
