@@ -20,6 +20,7 @@ NeoBundleFetch "Shougo/neobundle.vim"
 " Other languages
 NeoBundle "sheerun/vim-polyglot"
 NeoBundle "guileen/vim-node"
+NeoBundle "mxw/vim-jsx"
 NeoBundle "josuesasilva/vim-spell-pt-br"
 
 " Html, Xml, Css, Markdown...

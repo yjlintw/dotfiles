@@ -12,3 +12,7 @@ let g:syntastic_html_tidy_ignore_errors = [
     \"proprietary attribute \"role\"",
     \"proprietary attribute \"hidden\"",
 \]
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
