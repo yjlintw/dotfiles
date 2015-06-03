@@ -152,8 +152,8 @@ def install_apt_packages
   puts "=========================================================="
   puts "Installing apt-get packages (there may be some warnings):"
   puts "=========================================================="
-  puts "zsh, exuberant-ctags, git, tmux, silversearcher-ag, gvim with lua support"
-  run %{sudo apt-get install zsh exuberant-ctags git tmux silversearcher-ag vim-gnome}
+  puts "build-essential, ruby-full, rake, zsh, exuberant-ctags, git, tmux, silversearcher-ag, gvim with lua support"
+  run %{sudo apt-get install build-essential ruby-full rake zsh exuberant-ctags git tmux silversearcher-ag vim-gnome}
   puts
   puts
 end
