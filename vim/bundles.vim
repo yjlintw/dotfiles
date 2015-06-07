@@ -108,7 +108,7 @@ NeoBundle "othree/javascript-libraries-syntax.vim"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "chrisbra/color_highlight.git"
 NeoBundle "tomasr/molokai"
-" NeoBundle "chriskempson/base16-vim"
+NeoBundle "lfilho/base16-vim"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "vim-scripts/TagHighlight.git"
 " Required for Gblame in terminal vim

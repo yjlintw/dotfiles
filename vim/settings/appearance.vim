@@ -1,22 +1,24 @@
+let base16colorspace=256
 set background=dark
 set laststatus=2 "always show the statusline
 set cursorline
 
 " Make it beautiful - colors and fonts
-let s:myTheme='molokai'
+let s:myTheme='base16-marelo'
 exec 'colorscheme ' . s:myTheme
 
 " If there's a custom airline theme too, load it.
-let s:airlineCustom="~/.vim/custom-settings/colors/" . s:myTheme . "-airline.vim"
+let s:airlineCustom="~/.vim/settings/colors/" . s:myTheme . "-airline.vim"
 if filereadable(expand(s:airlineCustom))
     exec "au VimEnter * so " . s:airlineCustom
 endif
 
-let s:colorSchemeCustom="~/.vim/custom-settings/colors/" . s:myTheme . ".vim"
+let s:colorSchemeCustom="~/.vim/settings/colors/" . s:myTheme . ".vim"
 if filereadable(expand(s:colorSchemeCustom))
     exec "au VimEnter * so " . s:colorSchemeCustom
 endif
 
+    set t_Co=256
 if has("gui_running")
     " Disable the scrollbars (NERDTree)
     set guioptions-=r
@@ -31,7 +33,6 @@ if has("gui_running")
     set columns=999
 
     "tell the term has 256 colors
-    set t_Co=256
 
     " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
     " For some reason this doesn't work as a regular set command,
