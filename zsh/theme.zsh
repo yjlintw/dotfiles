@@ -1,4 +1,4 @@
-prompt agnoster
+prompt marelo
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.yadr/zsh/base16-shell/base16-marelo.dark.sh"
