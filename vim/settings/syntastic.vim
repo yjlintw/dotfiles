@@ -11,6 +11,11 @@ let g:syntastic_html_tidy_ignore_errors = [
     \"<input> proprietary attribute \"autocomplete\"",
     \"proprietary attribute \"role\"",
     \"proprietary attribute \"hidden\"",
+    \"<template> is not recognized!",
+    \"discarding unexpected <template>",
+    \"missing <li>",
+    \"discarding unexpected </template>",
+    \"discarding unexpected <body>"
 \]
 
 " Allow JSX in normal JS files
