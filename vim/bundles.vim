@@ -28,6 +28,7 @@ NeoBundle "josuesasilva/vim-spell-pt-br"
 NeoBundle "tristen/vim-sparkup"
 NeoBundle "nelstrom/vim-markdown-preview"
 NeoBundle "skwp/vim-html-escape"
+NeoBundle "Slava/vim-spacebars"
 
 " Git related...
 " NeoBundle "idanarye/vim-merginal"
