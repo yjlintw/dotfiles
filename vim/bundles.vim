@@ -68,7 +68,6 @@ NeoBundle 'Shougo/vimproc', {
             \ }
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/neomru.vim"
-NeoBundle "Keithbsmiley/investigate.vim"
 NeoBundle "MarcWeber/vim-addon-mw-utils.git"
 NeoBundle "bogado/file-line.git"
 NeoBundle "majutsushi/tagbar.git"
@@ -92,7 +91,7 @@ NeoBundle "xsunsmile/showmarks.git"
 NeoBundle "MarcWeber/vim-addon-local-vimrc"
 
 " Text objects
-NeoBundle "gcmt/wildfire.vim"
+NeoBundle "terryma/vim-expand-region"
 NeoBundle "austintaylor/vim-indentobject"
 NeoBundle "coderifous/textobj-word-column.vim"
 NeoBundle "kana/vim-textobj-datetime"
@@ -108,10 +107,8 @@ NeoBundle "othree/javascript-libraries-syntax.vim"
 " Cosmetics, color scheme, Airline...
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "chrisbra/color_highlight.git"
-NeoBundle "tomasr/molokai"
 NeoBundle "lfilho/base16-vim"
 NeoBundle "itchyny/lightline.vim"
-NeoBundle "vim-scripts/TagHighlight.git"
 " Required for Gblame in terminal vim
 NeoBundle "godlygeek/csapprox.git"
 
