@@ -129,5 +129,8 @@
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
+[pager]
+	diff = "diff-so-fancy | less --tabs=4 -RFX"
+	show = "diff-so-fancy | less --tabs=4 -RFX"
 [include]
   path = .gitconfig.user
