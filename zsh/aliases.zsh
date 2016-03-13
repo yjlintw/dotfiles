@@ -179,8 +179,11 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
 
-# Docker
+# DockeR
 alias dr='docker'
-alias dsa='docker stop $(docker ps -a -q)'
+# DockeR Stop All
+alias drsa='docker stop $(docker ps -a -q)'
+# Docker Remove All Containers
 alias drac='docker rm $(docker ps -a -q)'
+# Docker Remove All Images
 alias drai='docker rmi $(docker images -q)'
