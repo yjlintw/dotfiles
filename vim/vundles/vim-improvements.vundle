@@ -27,3 +27,12 @@ Bundle "vim-scripts/AutoTag.git"
 Bundle "vim-scripts/lastpos.vim"
 Bundle "vim-scripts/sudo.vim"
 Bundle "goldfeld/ctrlr.vim"
+Bundle "MarcWeber/vim-addon-local-vimrc"
+Bundle "editorconfig/editorconfig-vim"
+Bundle "lfilho/cosco.vim"
+Bundle "tommcdo/vim-exchange"
+Bundle "AndrewRadev/sideways.vim"
+
+if system('uname')=~'Darwin'
+    Bundle "zerowidth/vim-copy-as-rtf"
+endif
