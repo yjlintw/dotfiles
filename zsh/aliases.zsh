@@ -208,3 +208,12 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+# DockeR
+alias dr='docker'
+# DockeR Stop All
+alias drsa='docker stop $(docker ps -a -q)'
+# Docker Remove All Containers
+alias drac='docker rm $(docker ps -a -q)'
+# Docker Remove All Images
+alias drai='docker rmi $(docker images -q)'
