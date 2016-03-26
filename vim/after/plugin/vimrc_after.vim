@@ -12,15 +12,14 @@ endif
 " ===============
 " Marelo appearance customizations:
 " ===============
-let base16colorspace=256
-set cursorline
+let g:yadr_disable_solarized_enhancements=1
 
-" Don't try to highlight lines longer than 800 characters.
-set synmaxcol=800
+colorscheme base16-marelo
 
-" Resize splits when the window is resized
-au VimResized * :wincmd =
-
-" Highlight VCS conflict markers
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Fantasque\ Sans\ Mono\ Regular\ 17,Inconsolata\ XL\ 12,Inconsolata\ 15,Monaco\ 12
+  else
+    set guifont=Fantasque\ Sans\ Mono\ Regular:h17,Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
+  end
+endif
