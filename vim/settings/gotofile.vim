@@ -4,3 +4,6 @@
 
 " use ,gf to go to file in a vertical split
 nnoremap <silent> ,gf   :vertical botright wincmd F<CR>
+
+" Externally open a file
+nnoremap gO :!open <cfile><CR>
