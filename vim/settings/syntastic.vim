@@ -21,3 +21,26 @@ endfunction
 if !exists("g:syntastic_ruby_exec")
     let g:syntastic_ruby_exec = s:FindRubyExec()
 endif
+
+"don't care about warnings
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+
+let g:syntastic_html_tidy_ignore_errors = [
+    \"trimming empty <i>",
+    \"trimming empty <span>",
+    \"<input> proprietary attribute \"autocomplete\"",
+    \"proprietary attribute \"role\"",
+    \"proprietary attribute \"hidden\"",
+    \"<template> proprietary attribute \"name\"",
+    \"discarding unexpected <template>",
+    \"missing <li>",
+    \"discarding unexpected </template>",
+    \"discarding unexpected <body>"
+\]
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+" Use HTML5 version of tidy
+let g:syntastic_html_tidy_exec = 'tidy5'
