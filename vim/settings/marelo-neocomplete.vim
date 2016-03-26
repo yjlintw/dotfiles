@@ -1,6 +1,6 @@
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-  \ 'javascript' : expand('~/.yadr/vim/dict/javascript.dict') .','. expan
+  \ 'javascript' : expand('~/.yadr/vim/dict/javascript.dict')
 \ }
 
 " <CR>: close popup and save indent.
