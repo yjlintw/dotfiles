@@ -9,3 +9,7 @@ au VimResized * :wincmd =
 
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+" Hide ~ for blank lines
+hi NonText guifg=bg
+
+
