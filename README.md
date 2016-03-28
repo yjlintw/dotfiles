@@ -1,3 +1,31 @@
+**This is @lfilho's version of YADR.**
+
+See the differences from this repo in the section below, and the original README right after it:
+
+The keymaps for each plugin or behaviour can be found peeking at [doc](doc) folder.
+
+# This fork's differences
+
+* ZSH
+  * `v` alias for opening `mvim` (MacVim)
+  * My personal zsh prompt theme (marelo)
+
+* VIM
+  * [Javascript Dictionary](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + neocomplete hook
+  * [Cosco.vim](http://github.com/lfilho/cosco.vim) for comma and semi-colon insertion bliss
+  * [Sideways.vim](https://github.com/AndrewRadev/sideways.vim)
+  * Support for [project/folder specific .vimrc configuration](https://github.com/MarcWeber/vim-addon-local-vimrc)
+  * Support for Mustache templating system
+  * My personal colorscheme for vim
+  * Splits open to the right (not left) and VSplits open to the bottom (not top)
+  * Strips trailing withespace automatically upon save
+  * Perl regex style by default
+
+* OSX
+  * Config to open MacVim maximized by default
+
+# The original YADR Readme:
+
      _     _           _
     | |   | |         | |
     | |___| |_____  __| | ____
