@@ -17,6 +17,7 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * [Local .vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc). Loads/runs a `.vimrc` relative to the current folder (great for project specific configurations)
   * [base16-marelo](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
   * [Editor Config](https://github.com/editorconfig/editorconfig-vim) plugin
+  * Beautiful Fantasque font
   * Splits open to the right (not left) and VSplits open to the bottom (not top)
   * Strips trailing withespace automatically upon save
   * Perl regex style by default
