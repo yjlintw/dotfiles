@@ -23,3 +23,8 @@ if has("gui_running")
     set guifont=Fantasque\ Sans\ Mono\ Regular:h17,Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
   end
 endif
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+" Hide ~ for blank lines
+hi NonText guifg=bg

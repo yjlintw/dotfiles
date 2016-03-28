@@ -6,10 +6,3 @@ set synmaxcol=800
 
 " Resize splits when the window is resized
 au VimResized * :wincmd =
-
-" Highlight VCS conflict markers
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-" Hide ~ for blank lines
-hi NonText guifg=bg
-
-
