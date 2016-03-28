@@ -11,12 +11,12 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * My personal zsh prompt theme (marelo)
 
 * VIM
-  * [Javascript Dictionary](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + neocomplete hook
-  * [Cosco.vim](http://github.com/lfilho/cosco.vim) for comma and semi-colon insertion bliss
-  * [Sideways.vim](https://github.com/AndrewRadev/sideways.vim)
-  * Support for [project/folder specific .vimrc configuration](https://github.com/MarcWeber/vim-addon-local-vimrc)
-  * Support for Mustache templating system
-  * My personal colorscheme for vim
+  * [Javascript dict](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + NeoComplete hook
+  * [Cosco.vim](http://github.com/lfilho/cosco.vim). my own plugin for comma or semi-colon easy insertion
+  * [Sideways.vim](https://github.com/AndrewRadev/sideways.vim). Makes dealing with method arguments easier
+  * [Local .vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc). Loads/runs a `.vimrc` relative to the current folder (great for project specific configurations)
+  * [base16-marelo](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
+  * [Editor Config](https://github.com/editorconfig/editorconfig-vim) plugin
   * Splits open to the right (not left) and VSplits open to the bottom (not top)
   * Strips trailing withespace automatically upon save
   * Perl regex style by default
