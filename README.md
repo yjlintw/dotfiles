@@ -7,8 +7,21 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
 # This fork's differences
 
 * ZSH
-  * `v` alias for opening `mvim` (MacVim)
+  * New aliases:
+    * `v` alias for opening `mvim` (MacVim)
+    * Docker aliases
   * My personal zsh prompt theme (marelo)
+
+* GIT
+  * New aliases
+    * `ren-remote`. Rename remote branch
+    * `ren-local`  Rename local branch
+    * `ren`. Rename local and remote branch
+    * `amend-noedit`. Amend commit reusing last commit message
+    * Use `diff-so-fancy` by default to show better diffs
+
+* iTerm2
+  * My own theme (`base16-marelo.dark.256`)
 
 * VIM
   * [Javascript dict](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + NeoComplete hook
@@ -17,13 +30,25 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * [Local .vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc). Loads/runs a `.vimrc` relative to the current folder (great for project specific configurations)
   * [base16-marelo](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
   * [Editor Config](https://github.com/editorconfig/editorconfig-vim) plugin
+  * [Expand region](https://github.com/terryma/vim-expand-region). Hit `<enter>` to expand selection inside stuff like `(), [], {}, <>,` etc
+  * [Sparkup](https://github.com/rstacruz/sparkup). HTML Zen Coding.
+  * OSX only: [Copy-as-RTF](https://github.com/zerowidth/vim-copy-as-rtf). For copying syntax highlighted code to the clipboard and pasting, for example on Keynote, Pages, etc
   * Beautiful Fantasque font
   * Splits open to the right (not left) and VSplits open to the bottom (not top)
   * Strips trailing withespace automatically upon save
   * Perl regex style by default
+  * Markdown files are able to show fanced languages (programming blocks with syntax highlighting)
+  * Custom lightline bar
+  * NERDTree ignores `node_modules` folder
+  * Vim Function to style RequireJS imports (`:StyleRequireJsImports`)
+  * Vim Function to remove padding blank lines inside functions
 
 * OSX
   * Config to open MacVim maximized by default
+  * New brew packages
+    * `hub`, `ghi` are installed via brew instead of vendored in
+    * `diff-so-fancy`
+    * `tidy5-html5`
 
 # The original YADR Readme:
 
