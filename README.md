@@ -44,6 +44,7 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * Vim Function to remove padding blank lines inside functions
   * Return `<C-x>` and `<C-z>` to their original functions
     * `,,n` and `,,p` to navigate the quickfix error list
+  * `Ag` now highlights the search and doesn't open first result by default
 
 * OSX
   * Config to open MacVim maximized by default
