@@ -42,6 +42,8 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * NERDTree ignores `node_modules` folder
   * Vim Function to style RequireJS imports (`:StyleRequireJsImports`)
   * Vim Function to remove padding blank lines inside functions
+  * Return `<C-x>` and `<C-z>` to their original functions
+    * `,,n` and `,,p` to navigate the quickfix error list
 
 * OSX
   * Config to open MacVim maximized by default
