@@ -2,7 +2,7 @@
 
 # Install
 
-    sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+    sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
 
 See the differences from this repo in the section below, and the original README right after it:
 
