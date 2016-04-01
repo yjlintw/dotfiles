@@ -45,7 +45,7 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * Custom lightline bar
   * NERDTree ignores `node_modules` folder
   * Vim Function to style RequireJS imports (`:StyleRequireJsImports`)
-  * Vim Function to remove padding blank lines inside functions
+  * Vim Function to remove padding blank lines inside functions (`:KillBlockPadding`)
   * Return `<C-x>` and `<C-z>` to their original functions
     * `,,n` and `,,p` to navigate the quickfix error list
   * `Ag` now highlights the search and doesn't open first result by default
