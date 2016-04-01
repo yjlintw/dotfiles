@@ -1,5 +1,9 @@
 **This is @lfilho's version of YADR.**
 
+# Install
+
+    sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+
 See the differences from this repo in the section below, and the original README right after it:
 
 The keymaps for each plugin or behaviour can be found peeking at [doc](doc) folder.
