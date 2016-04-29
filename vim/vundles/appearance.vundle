@@ -8,4 +8,3 @@ Bundle "lfilho/base16-vim"
 
 " Required for Gblame in terminal vim
 Bundle "godlygeek/csapprox.git"
-
