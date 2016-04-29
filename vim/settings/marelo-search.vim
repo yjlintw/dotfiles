@@ -6,8 +6,8 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Keep search matches in the middle of the window.
-nnoremap n nzzzv
-nnoremap N Nzzzv
+nnoremap n nzz
+nnoremap N Nzz
 
 " Same when jumping around
 nnoremap g; g;zz
