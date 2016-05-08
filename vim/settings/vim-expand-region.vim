@@ -1,5 +1,5 @@
-map <Enter> <Plug>(expand_region_expand)
-map <S-Enter> <Plug>(expand_region_shrink)
+map ,<CR> <Plug>(expand_region_expand)
+map ,<S-CR> <Plug>(expand_region_shrink)
 
 call expand_region#custom_text_objects({
       \ 'a]' :1,
