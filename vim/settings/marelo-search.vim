@@ -6,8 +6,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Keep search matches in the middle of the window.
-nnoremap n nzz
-nnoremap N Nzz
+let g:indexed_search_center = 1
 
 " Same when jumping around
 nnoremap g; g;zz
