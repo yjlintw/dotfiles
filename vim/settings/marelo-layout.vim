@@ -11,3 +11,4 @@ set splitbelow " Horizontal split on below
 set showtabline=2 " Always display tabline > prevents window resizing when closing down to just one tab
 
 set relativenumber
+set diffopt+=vertical
