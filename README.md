@@ -1,6 +1,16 @@
 **This is @lfilho's version of YADR.**
 
-# Install
+# Install (for Linux Users)
+
+1. Make sure you have `zsh` installed on your machine (default location is `/bin/zsh`). Type `zsh --version` to see if you have it. If not, install it running the command `sudo apt-get install zsh`
+2. Make sure you have `vim` installed. If not, install it with `sudo apt-get install vim`
+3. Run the installation script running ```sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"```
+4. If asked, provide your superuser password
+5. Configure your terminal program to point the command to zsh (default `/bin/zsh`)
+6. Restart you Terminal
+7. You're done.
+
+# Install (for OSX Users)
 
     sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
 
