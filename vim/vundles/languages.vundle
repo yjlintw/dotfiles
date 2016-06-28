@@ -9,4 +9,3 @@ Bundle 'josuesasilva/vim-spell-pt-br'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Slava/vim-spacebars'
-Bundle 'lfilho/js-single-to-multi-var'
