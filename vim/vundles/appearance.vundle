@@ -4,7 +4,8 @@ Bundle "itchyny/lightline.vim"
 Bundle "jby/tmux.vim.git"
 Bundle "morhetz/gruvbox"
 Bundle "xsunsmile/showmarks.git"
-Bundle "lfilho/base16-vim"
+"Bundle "lfilho/base16-vim"
+Bundle "w0ng/vim-hybrid"
 
 " Required for Gblame in terminal vim
 Bundle "godlygeek/csapprox.git"

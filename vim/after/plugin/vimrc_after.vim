@@ -14,7 +14,10 @@ endif
 " ===============
 let g:yadr_disable_solarized_enhancements=1
 
-colorscheme base16-marelo
+" colorscheme base16-marelo
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+colorscheme hybrid
 
 if has("gui_running")
   if has("gui_gtk2")
