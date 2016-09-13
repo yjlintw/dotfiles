@@ -29,11 +29,3 @@ Bundle "vim-scripts/sudo.vim"
 Bundle "goldfeld/ctrlr.vim"
 Bundle "editorconfig/editorconfig-vim"
 
-Bundle "MarcWeber/vim-addon-local-vimrc"
-Bundle "lfilho/cosco.vim"
-Bundle "tommcdo/vim-exchange"
-Bundle "AndrewRadev/sideways.vim"
-
-if system('uname')=~'Darwin'
-    Bundle "zerowidth/vim-copy-as-rtf"
-endif

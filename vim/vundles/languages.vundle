@@ -5,7 +5,3 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'skwp/vim-html-escape'
 Bundle 'mxw/vim-jsx'
-Bundle 'josuesasilva/vim-spell-pt-br'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'Slava/vim-spacebars'
