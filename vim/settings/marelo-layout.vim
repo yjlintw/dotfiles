@@ -10,5 +10,8 @@ set splitright " Vertical split on right
 set splitbelow " Horizontal split on below
 set showtabline=2 " Always display tabline > prevents window resizing when closing down to just one tab
 
-set relativenumber
+set relativenumber nonumber
+autocmd InsertEnter * :set norelativenumber number
+autocmd InsertLeave * :set relativenumber  nonumber
+
 set diffopt+=vertical
