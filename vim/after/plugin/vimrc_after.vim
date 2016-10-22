@@ -21,9 +21,10 @@ colorscheme hybrid
 
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Fantasque\ Sans\ Mono\ Regular\ 17,Inconsolata\ XL\ 12,Inconsolata\ 15,Monaco\ 12
+    set guifont=Fira\ Code\ h12
   else
-    set guifont=Fantasque\ Sans\ Mono\ Regular:h17,Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
+    set macligatures
+    set guifont=Fira\ Code:h12
   end
 endif
 
