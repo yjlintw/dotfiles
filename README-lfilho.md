@@ -24,7 +24,7 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * New aliases:
     * `v` alias for opening `mvim` (MacVim)
     * Docker aliases
-  * My personal zsh prompt theme (marelo)
+  * My personal zsh prompt theme (lfilho)
 
 * GIT
   * New aliases
@@ -35,14 +35,14 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
     * Use `diff-so-fancy` by default to show better diffs
 
 * iTerm2
-  * My own theme (`base16-marelo.dark.256`)
+  * My own theme (`base16-lfilho.dark.256`)
 
 * VIM
   * [Javascript dict](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + NeoComplete hook
   * [Cosco.vim](http://github.com/lfilho/cosco.vim). my own plugin for comma or semi-colon easy insertion
   * [Sideways.vim](https://github.com/AndrewRadev/sideways.vim). Makes dealing with method arguments easier
   * [Local .vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc). Loads/runs a `.vimrc` relative to the current folder (great for project specific configurations)
-  * [base16-marelo](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
+  * [base16-lfilho](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
   * [Editor Config](https://github.com/editorconfig/editorconfig-vim) plugin
   * [Expand region](https://github.com/terryma/vim-expand-region). Hit `<enter>` to expand selection inside stuff like `(), [], {}, <>,` etc
   * [Sparkup](https://github.com/rstacruz/sparkup). HTML Zen Coding.
