@@ -17,6 +17,7 @@ Bundle "henrik/vim-indexed-search"
 " Text objects
 
 Bundle "terryma/vim-expand-region"
+Bundle "kana/vim-textobj-lastpat"
 
 " Other improvements
 
