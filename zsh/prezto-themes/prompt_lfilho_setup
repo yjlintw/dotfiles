@@ -11,7 +11,7 @@ DOUBLEUP_VCS_INTERNAL_HASH_LENGTH=${DOUBLEUP_VCS_INTERNAL_HASH_LENGTH:-8}
 DOUBLEUP_VCS_HIDE_TAGS=${DOUBLEUP_VCS_HIDE_TAGS:-true}
 DOUBLEUP_VCS_SHOW_CHANGESET=${DOUBLEUP_VCS_SHOW_CHANGESET:-false}
 DOUBLEUP_VERBOSE_BG_JOBS=${DOUBLEUP_VERBOSE_BG_JOBS:-true}
-DOUBLEUP_VERBOSE_STATUS=${DOUBLEUP_VERBOSE_STATUS:-false}
+DOUBLEUP_VERBOSE_STATUS=${DOUBLEUP_VERBOSE_STATUS:-true}
 
 # Special Powerline characters
 # NOTE: The icons are defined using Unicode escape sequences so it is
@@ -282,7 +282,7 @@ doubleup_build_second_prompt() {
   prompt_end
 }
 
-PROMPT='
-%{%f%b%k%}$(doubleup_build_first_prompt)
+PROMPT='%{%f%b%k%}$(doubleup_build_first_prompt)
 %{%f%b%k%}$(doubleup_build_second_prompt) '
 
+prompt_lfilho_setup "$@"
