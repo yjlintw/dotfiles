@@ -32,7 +32,7 @@ alias cls='clear;ls'
 alias df='df -h'
 alias du='du -h -d 2'
 
-if [[ $platform == 'linux' || `ls --version | grep coreutils` ]]; then
+if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
   alias ls='ls --color=auto'
 elif [[ $platform == 'darwin' ]]; then
