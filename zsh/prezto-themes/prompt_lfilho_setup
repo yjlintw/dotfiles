@@ -285,4 +285,3 @@ doubleup_build_second_prompt() {
 PROMPT='%{%f%b%k%}$(doubleup_build_first_prompt)
 %{%f%b%k%}$(doubleup_build_second_prompt) '
 
-prompt_lfilho_setup "$@"
