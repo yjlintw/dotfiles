@@ -25,6 +25,8 @@ task :install => [:submodule_init, :submodules] do
     Rake::Task["install_vundle"].execute
   end
 
+  run %{ touch ~/.hushlogin }
+
   Rake::Task["install_prezto"].execute
 
   install_fonts
