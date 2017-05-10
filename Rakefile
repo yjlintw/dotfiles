@@ -1,6 +1,5 @@
 require 'rake'
 require 'fileutils'
-require File.join(File.dirname(__FILE__), 'bin', 'yadr', 'vundle')
 
 desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
@@ -20,7 +19,6 @@ task :install => [:submodule_init, :submodules] do
   install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   install_files(Dir.glob('{vim,vimrc}'))
-  Rake::Task["install_vundle"].execute
   run %{ ln -nfs ~/.yadr/nvim ~/.config/nvim }
   run %{ touch ~/.hushlogin }
 
@@ -68,26 +66,6 @@ task :submodules do
     }
     puts
   end
-end
-
-desc "Runs Vundle installer in a clean vim environment"
-task :install_vundle do
-  puts "======================================================"
-  puts "Installing and updating vundles."
-  puts "The installer will now proceed to run PluginInstall to install vundles."
-  puts "======================================================"
-
-  puts ""
-
-  vundle_path = File.join('vim','bundle', 'vundle')
-  unless File.exists?(vundle_path)
-    run %{
-      cd $HOME/.yadr
-      git clone https://github.com/gmarik/vundle.git #{vundle_path}
-    }
-  end
-
-  Vundle::update_vundle
 end
 
 task :default => 'install'
