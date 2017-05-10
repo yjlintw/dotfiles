@@ -14,3 +14,8 @@ vim/sessions
 .netrwhist
 bin/subl
 tags
+
+nvim/custom-settings/before/*.vim
+!nvim/custom-settings/before/main.vim
+nvim/custom-settings/after/*.vim
+!nvim/custom-settings/after/main.vim
