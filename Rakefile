@@ -15,16 +15,13 @@ task :install => [:submodule_init, :submodules] do
 
   # this has all the runcoms from this directory.
   install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
-  install_files(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   install_files(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   install_files(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
   install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
-  if want_to_install?('vim configuration (highly recommended)')
-    install_files(Dir.glob('{vim,vimrc}'))
-    Rake::Task["install_vundle"].execute
-  end
-
+  install_files(Dir.glob('{vim,vimrc}'))
+  Rake::Task["install_vundle"].execute
+  run %{ ln -nfs ~/.yadr/nvim ~/.config/nvim }
   run %{ touch ~/.hushlogin }
 
   Rake::Task["install_prezto"].execute
@@ -46,7 +43,6 @@ end
 
 desc 'Updates the installation'
 task :update do
-  Rake::Task["vundle_migration"].execute if needs_migration_to_vundle?
   Rake::Task["install"].execute
   #TODO: for now, we do the same as install. But it would be nice
   #not to clobber zsh files
@@ -72,25 +68,6 @@ task :submodules do
     }
     puts
   end
-end
-
-desc "Performs migration from pathogen to vundle"
-task :vundle_migration do
-  puts "======================================================"
-  puts "Migrating from pathogen to vundle vim plugin manager. "
-  puts "This will move the old .vim/bundle directory to"
-  puts ".vim/bundle.old and replacing all your vim plugins with"
-  puts "the standard set of plugins. You will then be able to "
-  puts "manage your vim's plugin configuration by editing the "
-  puts "file .vim/vundles.vim"
-  puts "======================================================"
-
-  Dir.glob(File.join('vim', 'bundle','**')) do |sub_path|
-    run %{git config -f #{File.join('.git', 'config')} --remove-section submodule.#{sub_path}}
-    # `git rm --cached #{sub_path}`
-    FileUtils.rm_rf(File.join('.git', 'modules', sub_path))
-  end
-  FileUtils.mv(File.join('vim','bundle'), File.join('vim', 'bundle.old'))
 end
 
 desc "Runs Vundle installer in a clean vim environment"
@@ -338,16 +315,6 @@ def install_files(files, method = :symlink)
     puts "=========================================================="
     puts
   end
-end
-
-def needs_migration_to_vundle?
-  File.exists? File.join('vim', 'bundle', 'tpope-vim-pathogen')
-end
-
-
-def list_vim_submodules
-  result=`git submodule -q foreach 'echo $name"||"\`git remote -v | awk "END{print \\\\\$2}"\`'`.select{ |line| line =~ /^vim.bundle/ }.map{ |line| line.split('||') }
-  Hash[*result.flatten]
 end
 
 def apply_theme_to_iterm_profile_idx(index, color_scheme_path)
