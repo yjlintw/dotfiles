@@ -1,6 +1,14 @@
+set splitright " Vertical split on right
+set splitbelow " Horizontal split on below
+
+set relativenumber nonumber
+autocmd InsertEnter * :set norelativenumber number
+autocmd InsertLeave * :set relativenumber  nonumber
+
+set diffopt+=vertical
 set clipboard+=unnamedplus
 set list listchars=tab:\ \ ,trail:·
-set relativenumber  "Line numbers are good
+
 set gcr=a:blinkon0  "Disable cursor blink
 set visualbell      "No sounds
 
@@ -24,10 +32,12 @@ set undofile
 " ================ Indentation ======================
 
 set smartindent
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
+" Some file types use real tabs
+au FileType {make,gitconfig} set noexpandtab sw=4
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
