@@ -6,7 +6,7 @@
 " files will be ignored by git so you don't need to fork the repo just for
 " these kind of customizations.
 
-let customSettingsPath = '~/.config/nvim/custom-settings/after'
+let customSettingsPath = '~/.config/nvim/settings/after'
 
 for fpath in split(globpath(customSettingsPath, '*.vim'), '\n')
   if (fpath != expand(customSettingsPath) . "/main.vim") " skip main.vim (this file)

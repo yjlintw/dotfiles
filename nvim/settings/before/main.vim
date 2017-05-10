@@ -6,7 +6,7 @@
 " files will be ignored by git so you don't need to fork the repo just for
 " these kind of customizations.
 
-let customSettingsPath = '~/.config/nvim/custom-settings/before'
+let customSettingsPath = '~/.config/nvim/settings/before'
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
