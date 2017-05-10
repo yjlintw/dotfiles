@@ -66,3 +66,7 @@ set sidescroll=1
 
 set ignorecase " Ignore case when searching...
 set smartcase  " ...unless we type a capital
+
+
+" ================ Formatting =======================
+set formatoptions+=j " Delete comment character when joining commented lines

@@ -175,6 +175,8 @@ def install_homebrew
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
   run %{brew bundle install}
+  run %{pip3 install neovim} # For NeoVim plugins
+  run %{gem install neovim} # For NeoVim plugins
   puts
   puts
 end

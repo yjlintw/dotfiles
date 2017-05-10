@@ -1,0 +1,6 @@
+Plug 'sheerun/vim-polyglot'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/syntastic'
+Plug 'nelstrom/vim-markdown-preview'
+Plug 'skwp/vim-html-escape'

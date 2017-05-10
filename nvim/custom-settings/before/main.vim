@@ -12,7 +12,6 @@ let customSettingsPath = '~/.config/nvim/custom-settings/before'
 " That means all \x commands turn into ,x
 " The mapleader has to be set before loading all the plugins.
 let mapleader=","
-set relativenumber                      "Line numbers are good
 
 for fpath in split(globpath(customSettingsPath, '*.vim'), '\n')
   if (fpath != expand(customSettingsPath) . "/main.vim") " skip main.vim (this file)

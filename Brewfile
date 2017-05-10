@@ -35,7 +35,7 @@ brew 'macvim', args: ['with-lua', 'with-luajit', 'with-override-system-vim']
 brew 'neovim'
 brew 'openssl'
 brew 'podofo'
-brew 'python'
+brew 'python3'
 brew 'readline'
 brew 'rename'
 brew 'spaceman-diff'

@@ -1,16 +1,18 @@
-" ================ Custom Settings: BEFORE ========================
+" =========================================
+" ======== Custom Settings: BEFORE ========
+" =========================================
 
 source ~/.config/nvim/custom-settings/before/main.vim
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-" if filereadable(expand("~/.vim/vundles.vim"))
-"   source ~/.vim/vundles.vim
-" endif
-" au BufNewFile,BufRead *.vundle set filetype=vim
+" ======================================
+" ======== Plugins Installation ========
+" ======================================
 
-" ================ Main Settings ========================
+source ~/.config/nvim/plugins/main.vim
+
+" ========================================================
+" ======== Main Settings & Plugins Configuration  ========
+" ========================================================
 "
 " let vimSettings = '~/.config/nvim/settings'
 " let uname = system("uname -s")
@@ -27,7 +29,9 @@ source ~/.config/nvim/custom-settings/before/main.vim
 "
 "   exe 'source' fpath
 " endfor
-"
-" ================ Custom Settings: AFTER ========================
+
+" ========================================
+" ======== Custom Settings: AFTER ========
+" ========================================
 
 source ~/.config/nvim/custom-settings/after/main.vim
