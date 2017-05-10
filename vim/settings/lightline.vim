@@ -58,6 +58,3 @@ endfunction
 function! MyMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-
-" Use status bar even with single buffer
-set laststatus=2
