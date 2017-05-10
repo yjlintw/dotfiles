@@ -1,6 +1,10 @@
-Plug 'sheerun/vim-polyglot'
+Plug 'Slava/vim-spacebars'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'scrooloose/syntastic'
+Plug 'josuesasilva/vim-spell-pt-br'
 Plug 'nelstrom/vim-markdown-preview'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'rstacruz/sparkup', {'rtp': 'vim'}
+Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
 Plug 'skwp/vim-html-escape'
