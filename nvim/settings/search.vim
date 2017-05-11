@@ -11,23 +11,26 @@ function! GetVisual()
 endfunction
 
 "grep the current word using K (mnemonic Kurrent)
-nnoremap <silent> K :Ag! <cword><CR>
+nnoremap <silent> K :Rg <cword><CR>
 
 "grep visual selection
-vnoremap K :<C-U>execute 'Ag! "' . GetVisual() . '"'<CR>
+vnoremap K :<C-U>execute 'Rg "' . GetVisual() . '"'<CR>
 
 "grep current word up to the next exclamation point using ,K
-nnoremap ,K viwf!:<C-U>execute 'Ag! "' . GetVisual() . '"'<CR>
+nnoremap ,K viwf!:<C-U>execute 'Rg "' . GetVisual() . '"'<CR>
 
-"grep for 'def foo'
-nnoremap <silent> ,gd :Ag! 'def <cword>'<CR>
+"grep for 'def foo' (for Ruby)
+nnoremap <silent> ,gd :Rg 'def <cword>'<CR>
 
-",gg = Grep! - using Ag the silver searcher
-" open up a grep line, with a quote started for the search
-nnoremap ,gg :Ag! ""<left>
-
-"Grep for usages of the current file
-nnoremap ,gcf :exec "Ag! " . expand("%:t:r")<CR>
+" File search mappings:
+" open up a ripgrep line, with a quote started for the search
+"
+" Mnemonic: *F*ind in *A*ll files. Or *F*ind *A*nywhere.
+nnoremap ,fa :Rg ""<left>
+" Mnemonic: *F*ind *F*iles.
+nnoremap ,ff :Rg --files ""<Left>
+" Mnemonic: *F*ind usages of *T*his file
+nnoremap ,ft :exec "Rg " . expand("%:t:r")<CR>
 
 set wrapscan        " Search wrap the file
 set showmatch
