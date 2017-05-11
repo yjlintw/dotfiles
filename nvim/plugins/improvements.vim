@@ -12,7 +12,6 @@ Plug 'godlygeek/tabular'
 Plug 'goldfeld/ctrlr.vim'
 Plug 'jby/tmux.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kristijanhusak/vim-multiple-cursors' " TODO search better one
 Plug 'lfilho/cosco.vim'
 Plug 'mattn/webapi-vim'
 Plug 'sjl/gundo.vim'
