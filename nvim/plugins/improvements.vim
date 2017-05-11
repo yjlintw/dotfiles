@@ -3,7 +3,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Keithbsmiley/investigate.vim'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'Shougo/neocomplete.vim' " TODO search better one
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'bogado/file-line'
 Plug 'briandoll/change-inside-surroundings.vim'
 Plug 'christoomey/vim-tmux-navigator'
