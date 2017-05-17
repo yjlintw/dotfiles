@@ -6,3 +6,7 @@
 " using tComment's built in <c-_>p mapping
 nmap <silent> gcp <c-_>p
 
+" Ctrl-/ to toggle comments
+" TODO: investigate: it's requiring two taps to work...
+map <C-/> :TComment<CR>
+imap <C-/> <C-o>:TComment<CR>

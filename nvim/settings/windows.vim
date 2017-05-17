@@ -1,4 +1,4 @@
-" Use Q to intelligently close a window 
+" Use Q to intelligently close a window
 " (if there are multiple windows into the same buffer)
 " or kill the buffer entirely if it's the last window looking into that buffer
 function! CloseWindowOrKillBuffer()
@@ -18,3 +18,16 @@ function! CloseWindowOrKillBuffer()
 endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
+
+""""""""""""""""
+" Resize windows
+" TODO: google if there's a way to make these commands repeatable with . or
+" smt similar
+" Mnemonic: *W*indow *t*aller
+nnoremap <leader>Wt <C-w>+
+" Mnemonic: *W*indow *s*horter
+nnoremap <leader>Ws <C-w>-
+" Mnemonic: *W*indow *n*arrower
+nnoremap <leader>Wn <C-w><
+" Mnemonic: *W*indow *w*ider
+nnoremap <leader>Ww <C-w>>
