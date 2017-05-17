@@ -31,3 +31,15 @@ nnoremap <leader>Ws <C-w>-
 nnoremap <leader>Wn <C-w><
 " Mnemonic: *W*indow *w*ider
 nnoremap <leader>Ww <C-w>>
+
+""""""""""""""""
+" Zoom in
+" TODO: how to "zoom out"?
+map <silent> <leader>gz <C-w>o
+
+" Create window splits easier. The default
+" way is Ctrl-w,v and Ctrl-w,s. I remap
+" this to vv and ss
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+

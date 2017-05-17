@@ -2,12 +2,6 @@
 " General vim sanity improvements
 " ========================================
 "
-"
-" alias yw to yank the entire word 'yank inner word'
-" even if the cursor is halfway inside the word
-" FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap <leader>yw yiww
-
 " ,ow = 'overwrite word', replace a word with what's in the yank buffer
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
 nnoremap <leader>ow "_diwhp
@@ -24,39 +18,6 @@ endfunction
 " you want the traditional beginning of line, use ^
 nnoremap 0 ^
 nnoremap ^ 0
-
-" ,# Surround a word with #{ruby interpolation}
-map <leader># ysiw#
-vmap <leader># c#{<C-R>"}<ESC>
-
-" ," Surround a word with "quotes"
-map <leader>" ysiw"
-vmap <leader>" c"<C-R>""<ESC>
-
-" ,' Surround a word with 'single quotes'
-map <leader>' ysiw'
-vmap <leader>' c'<C-R>"'<ESC>
-
-" ,) or ,( Surround a word with (parens)
-" The difference is in whether a space is put in
-map <leader>( ysiw(
-map <leader>) ysiw)
-vmap <leader>( c( <C-R>" )<ESC>
-vmap <leader>) c(<C-R>")<ESC>
-
-" ,[ Surround a word with [brackets]
-map <leader>] ysiw]
-map <leader>[ ysiw[
-vmap <leader>[ c[ <C-R>" ]<ESC>
-vmap <leader>] c[<C-R>"]<ESC>
-
-" ,{ Surround a word with {braces}
-map <leader>} ysiw}
-map <leader>{ ysiw{
-vmap <leader>} c{ <C-R>" }<ESC>
-vmap <leader>{ c{<C-R>"}<ESC>
-
-map <leader>` ysiw`
 
 " gary bernhardt's hashrocket
 imap <c-l> <space>=><space>
@@ -83,28 +44,9 @@ nmap <silent> <leader>qo :copen<CR>
 nnoremap <silent> <leader>z :bp<CR>
 nnoremap <silent> <leader>x :bn<CR>
 
-" ==============================
-" Window/Tab/Split Manipulation
-" ==============================
-" Move between split windows by using the four directions H, L, K, J
-" NOTE: This has moved to vim/settings/vim-tmux-navigator.vim.
-" nnoremap <silent> <C-h> <C-w>h
-" nnoremap <silent> <C-l> <C-w>l
-" nnoremap <silent> <C-k> <C-w>k
-" nnoremap <silent> <C-j> <C-w>j
-
 " Make gf (go to file) create the file, if not existent
 nnoremap <C-w>f :sp +e<cfile><CR>
 nnoremap <C-w>gf :tabe<cfile><CR>
-
-" Zoom in
-map <silent> <leader>gz <C-w>o
-
-" Create window splits easier. The default
-" way is Ctrl-w,v and Ctrl-w,s. I remap
-" this to vv and ss
-nnoremap <silent> vv <C-w>v
-nnoremap <silent> ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 imap <silent> <C-K> <%=   %><Esc>3hi
@@ -122,9 +64,6 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 nnoremap <silent> <leader>cr :let @* = expand("%")<CR>
 nnoremap <silent> <leader>cn :let @* = expand("%:t")<CR>
 
-"Clear current search highlight by double tapping //
-nmap <silent> // :nohlsearch<CR>
-
 "(v)im (c)ommand - execute current line as a vim command
 nmap <silent> <leader>vc yy:<C-f>p<C-c><CR>
 
@@ -141,12 +80,6 @@ noremap <leader>hl :set hlsearch! hlsearch?<CR>
 " swap them: http://items.sjbach.com/319/configuring-vim-right
 nnoremap ' `
 nnoremap ` '
-
-" ============================
-" SplitJoin plugin
-" ============================
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
 
 " Get the current highlight group. Useful for then remapping the color
 map <leader>hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
