@@ -10,28 +10,6 @@
 " dashes are very common, and in position that require
 " a lot of hand movement. Vim to the rescue
 "
-" Now using the middle finger of either hand you can type
-" underscores with Alt-k or Alt-d, and add Shift
-" to type dashes
-imap <silent> <A-k> _
-imap <silent> <A-d> _
-imap <silent> <A-K> -
-imap <silent> <A-D> -
-
-" Change inside various enclosures with Alt-" and Alt-'
-" The f makes it find the enclosure so you don't have
-" to be standing inside it
-nnoremap <A-'> f'ci'
-nnoremap <A-"> f"ci"
-nnoremap <A-(> f(ci(
-nnoremap <A-)> f)ci)
-nnoremap <A-[> f[ci[
-nnoremap <A-]> f]ci]
-
-" ==== NERD tree
-" Alt-Shift-N for nerd tree
-nmap <A-N> :NERDTreeToggle<CR>
-
 " move up/down quickly by using Alt-j, Alt-k
 " which will move us around by functions
 nnoremap <silent> <A-j> }
