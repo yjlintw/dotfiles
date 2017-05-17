@@ -17,20 +17,20 @@ nnoremap <silent> K :Rg <cword><CR>
 vnoremap K :<C-U>execute 'Rg "' . GetVisual() . '"'<CR>
 
 "grep current word up to the next exclamation point using ,K
-nnoremap ,K viwf!:<C-U>execute 'Rg "' . GetVisual() . '"'<CR>
+nnoremap <leader>K viwf!:<C-U>execute 'Rg "' . GetVisual() . '"'<CR>
 
 "grep for 'def foo' (for Ruby)
-nnoremap <silent> ,gd :Rg 'def <cword>'<CR>
+nnoremap <silent> <leader>gd :Rg 'def <cword>'<CR>
 
 " File search mappings:
 " open up a ripgrep line, with a quote started for the search
 "
 " Mnemonic: *F*ind in *A*ll files. Or *F*ind *A*nywhere.
-nnoremap ,fa :Rg ""<left>
+nnoremap <leader>fa :Rg ""<left>
 " Mnemonic: *F*ind *F*iles.
-nnoremap ,ff :Rg --files ""<Left>
+nnoremap <leader>ff :Rg --files ""<Left>
 " Mnemonic: *F*ind usages of *T*his file
-nnoremap ,ft :exec "Rg " . expand("%:t:r")<CR>
+nnoremap <leader>ft :exec "Rg " . expand("%:t:r")<CR>
 
 set wrapscan        " Search wrap the file
 set showmatch
