@@ -9,9 +9,6 @@
 " out our hands. For example, typing underscores and
 " dashes are very common, and in position that require
 " a lot of hand movement. Vim to the rescue
-" ==== NERD tree
-" Cmd-Shift-N for nerd tree
-nmap <D-N> :NERDTreeToggle<CR>
 
 " move up/down quickly by using Cmd-j, Cmd-k
 " which will move us around by functions
