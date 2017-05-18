@@ -26,11 +26,6 @@ nnoremap <S-Down> <C-w>-
 nnoremap <S-Left> <C-w><
 nnoremap <S-Right> <C-w>>
 
-""""""""""""""""
-" Zoom in
-" TODO: how to "zoom out"?
-map <silent> <leader>gz <C-w>o
-
 " Create window splits easier. The default
 " way is Ctrl-w,v and Ctrl-w,s. I remap
 " this to vv and ss
