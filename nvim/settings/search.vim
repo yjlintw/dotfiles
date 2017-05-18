@@ -26,9 +26,9 @@ nnoremap <silent> <leader>gd :Rg 'def <cword>'<CR>
 " open up a ripgrep line, with a quote started for the search
 "
 " Mnemonic: *F*ind in *A*ll files. Or *F*ind *A*nywhere.
-nnoremap <leader>fa :Rg ""<left>
+nnoremap <leader>fa :Rg --smart-case ""<left>
 " Mnemonic: *F*ind *F*iles.
-nnoremap <leader>ff :Rg --files ""<Left>
+nnoremap <leader>ff :Rg --smart-case --files ""<Left>
 " Mnemonic: *F*ind usages of *T*his file
 nnoremap <leader>ft :exec "Rg " . expand("%:t:r")<CR>
 
