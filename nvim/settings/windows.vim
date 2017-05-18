@@ -20,17 +20,11 @@ endfunction
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
 """"""""""""""""
-" Resize windows
-" TODO: google if there's a way to make these commands repeatable with . or
-" smt similar
-" Mnemonic: *W*indow *t*aller
-nnoremap <leader>Wt <C-w>+
-" Mnemonic: *W*indow *s*horter
-nnoremap <leader>Ws <C-w>-
-" Mnemonic: *W*indow *n*arrower
-nnoremap <leader>Wn <C-w><
-" Mnemonic: *W*indow *w*ider
-nnoremap <leader>Ww <C-w>>
+" Easier window resizing
+nnoremap <S-Up> <C-w>+
+nnoremap <S-Down> <C-w>-
+nnoremap <S-Left> <C-w><
+nnoremap <S-Right> <C-w>>
 
 """"""""""""""""
 " Zoom in
@@ -42,4 +36,3 @@ map <silent> <leader>gz <C-w>o
 " this to vv and ss
 nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
-
