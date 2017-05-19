@@ -16,4 +16,3 @@ endfunction
 
 " Mnemonic: *P*roject
 nnoremap <leader>p :call OpenNerdTree()<CR>
-
