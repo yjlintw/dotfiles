@@ -95,16 +95,13 @@
 [mergetool]
   prompt = false
   keepBackup = false
-[mergetool "gvimdiff"]
-  cmd="gvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
-  keepbackup=false
-[mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+[mergetool "vimdiff"]
+  cmd="nvim -d -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
   keepbackup=false
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+  tool = vimdiff
 [apply]
   whitespace = nowarn
 [branch]
@@ -115,7 +112,7 @@
   default = upstream
 [core]
   autocrlf = false
-  editor = mvim -v
+  editor = nvim
   excludesfile = ~/.yadr/git/gitignore
 [advice]
   statusHints = false
@@ -125,7 +122,6 @@
   mnemonicprefix = true
   algorithm = patience
   compactionHeuristic = true
-  tool = mvim\\ -d
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
