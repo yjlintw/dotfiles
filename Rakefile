@@ -152,20 +152,12 @@ def install_fonts
 end
 
 def install_term_theme
-  puts "======================================================"
-  puts "Installing iTerm2 solarized theme."
-  puts "======================================================"
-  run %{ /usr/libexec/PlistBuddy -c "Add :'Custom Color Presets':'Solarized Light' dict" ~/Library/Preferences/com.googlecode.iterm2.plist }
-  run %{ /usr/libexec/PlistBuddy -c "Merge 'iTerm2/Solarized Light.itermcolors' :'Custom Color Presets':'Solarized Light'" ~/Library/Preferences/com.googlecode.iterm2.plist }
-  run %{ /usr/libexec/PlistBuddy -c "Add :'Custom Color Presets':'Solarized Dark' dict" ~/Library/Preferences/com.googlecode.iterm2.plist }
-  run %{ /usr/libexec/PlistBuddy -c "Merge 'iTerm2/Solarized Dark.itermcolors' :'Custom Color Presets':'Solarized Dark'" ~/Library/Preferences/com.googlecode.iterm2.plist }
-
   # If iTerm2 is not installed or has never run, we can't autoinstall the profile since the plist is not there
   if !File.exists?(File.join(ENV['HOME'], '/Library/Preferences/com.googlecode.iterm2.plist'))
     puts "======================================================"
-    puts "To make sure your profile is using the solarized theme"
+    puts "To make sure your profile is using the correct theme"
     puts "Please check your settings under:"
-    puts "Preferences> Profiles> [your profile]> Colors> Load Preset.."
+    puts "Preferences > Profiles > [your profile] > Colors > Load Preset..."
     puts "======================================================"
     return
   end
@@ -180,7 +172,7 @@ def install_term_theme
 
   # Ask the user on which profile he wants to install the theme
   profiles = iTerm_profile_list
-  message = "I've found #{profiles.size} #{profiles.size>1 ? 'profiles': 'profile'} on your iTerm2 configuration, which one would you like to apply the Solarized theme to?"
+  message = "I've found #{profiles.size} #{profiles.size>1 ? 'profiles': 'profile'} on your iTerm2 configuration, which one would you like to apply the theme to?"
   profiles << 'All'
   selected = ask message, profiles
 
