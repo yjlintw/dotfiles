@@ -31,7 +31,6 @@ brew 'ntfs-3g'
 brew 'hub'
 brew 'hub'
 brew 'lame'
-brew 'macvim', args: ['with-lua', 'with-luajit', 'with-override-system-vim']
 brew 'neovim'
 brew 'openssl'
 brew 'podofo'
