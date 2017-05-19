@@ -28,7 +28,11 @@ task :install => [:submodule_init, :submodules] do
 
   install_fonts
 
-  install_term_theme if $is_macos
+
+  if $is_macos
+    install_term_theme
+    run %{ ~/.yadr/bin/iterm2-italics.sh }
+  end
 
   run_bundle_config
 
