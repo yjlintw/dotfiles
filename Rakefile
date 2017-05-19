@@ -12,7 +12,6 @@ task :install => [:submodule_init, :submodules] do
   puts
 
   install_homebrew if $is_macos
-  install_rvm_binstubs
 
   # this has all the runcoms from this directory.
   install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
@@ -28,13 +27,9 @@ task :install => [:submodule_init, :submodules] do
 
   install_fonts
 
-
   if $is_macos
-    install_term_theme
-    run %{ ~/.yadr/bin/iterm2-italics.sh }
+    run %{ ~/.yadr/iTerm2/bootstrap-iterm2.sh }
   end
-
-  run_bundle_config
 
   success_msg("installed")
 end
@@ -76,7 +71,6 @@ end
 
 task :default => 'install'
 
-
 private
 def run(cmd)
   puts "[Running] #{cmd}"
@@ -91,27 +85,6 @@ def number_of_cores
   end
   puts
   cores.to_i
-end
-
-def run_bundle_config
-  return unless system("which bundle")
-
-  bundler_jobs = number_of_cores - 1
-  puts "======================================================"
-  puts "Configuring Bundlers for parallel gem installation"
-  puts "======================================================"
-  run %{ bundle config --global jobs #{bundler_jobs} }
-  puts
-end
-
-def install_rvm_binstubs
-  puts "======================================================"
-  puts "Installing RVM Bundler support. Never have to type"
-  puts "bundle exec again! Please use bundle --binstubs and RVM"
-  puts "will automatically use those bins after cd'ing into dir."
-  puts "======================================================"
-  run %{ chmod +x $rvm_path/hooks/after_cd_bundler }
-  puts
 end
 
 def install_homebrew
@@ -147,53 +120,8 @@ def install_fonts
   puts "Installing patched fonts for Powerline/Lightline."
   puts "======================================================"
   run %{ cp -f $HOME/.yadr/fonts/* $HOME/Library/Fonts } if $is_macos
-  run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/* ~/.fonts && fc-cache -vf ~/.fonts } if $is_macos
+  run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/* ~/.fonts && fc-cache -vf ~/.fonts } if !$is_macos
   puts
-end
-
-def install_term_theme
-  # If iTerm2 is not installed or has never run, we can't autoinstall the profile since the plist is not there
-  if !File.exists?(File.join(ENV['HOME'], '/Library/Preferences/com.googlecode.iterm2.plist'))
-    puts "======================================================"
-    puts "To make sure your profile is using the correct theme"
-    puts "Please check your settings under:"
-    puts "Preferences > Profiles > [your profile] > Colors > Load Preset..."
-    puts "======================================================"
-    return
-  end
-
-  # Ask the user which theme he wants to install
-  message = "Which theme would you like to apply to your iTerm2 profile?"
-  color_scheme = ask message, iTerm_available_themes
-
-  return if color_scheme == 'None'
-
-  color_scheme_file = File.join('iTerm2', "#{color_scheme}.itermcolors")
-
-  # Ask the user on which profile he wants to install the theme
-  profiles = iTerm_profile_list
-  message = "I've found #{profiles.size} #{profiles.size>1 ? 'profiles': 'profile'} on your iTerm2 configuration, which one would you like to apply the theme to?"
-  profiles << 'All'
-  selected = ask message, profiles
-
-  if selected == 'All'
-    (profiles.size-1).times { |idx| apply_theme_to_iterm_profile_idx idx, color_scheme_file }
-  else
-    apply_theme_to_iterm_profile_idx profiles.index(selected), color_scheme_file
-  end
-end
-
-def iTerm_available_themes
-   Dir['iTerm2/*.itermcolors'].map { |value| File.basename(value, '.itermcolors')} << 'None'
-end
-
-def iTerm_profile_list
-  profiles=Array.new
-  begin
-    profiles <<  %x{ /usr/libexec/PlistBuddy -c "Print :'New Bookmarks':#{profiles.size}:Name" ~/Library/Preferences/com.googlecode.iterm2.plist 2>/dev/null}
-  end while $?.exitstatus==0
-  profiles.pop
-  profiles
 end
 
 def ask(message, values)
@@ -291,16 +219,6 @@ def install_files(files, method = :symlink)
     puts "=========================================================="
     puts
   end
-end
-
-def apply_theme_to_iterm_profile_idx(index, color_scheme_path)
-  values = Array.new
-  16.times { |i| values << "Ansi #{i} Color" }
-  values << ['Background Color', 'Bold Color', 'Cursor Color', 'Cursor Text Color', 'Foreground Color', 'Selected Text Color', 'Selection Color']
-  values.flatten.each { |entry| run %{ /usr/libexec/PlistBuddy -c "Delete :'New Bookmarks':#{index}:'#{entry}'" ~/Library/Preferences/com.googlecode.iterm2.plist } }
-
-  run %{ /usr/libexec/PlistBuddy -c "Merge '#{color_scheme_path}' :'New Bookmarks':#{index}" ~/Library/Preferences/com.googlecode.iterm2.plist }
-  run %{ defaults read com.googlecode.iterm2 }
 end
 
 def success_msg(action)
