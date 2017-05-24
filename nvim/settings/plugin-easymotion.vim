@@ -4,5 +4,5 @@
 " down recognition. The home keys and the immediate keys
 " accessible by middle fingers are available
 let g:EasyMotion_keys='asdfjkoweriop'
-nmap <leader><ESC> ,,w
-nmap <leader><S-ESC> ,,b
+nmap <leader><ESC> <Plug>(easymotion-bd-w)
+nmap <leader><S-ESC> <Plug>(easymotion-bd-b)
