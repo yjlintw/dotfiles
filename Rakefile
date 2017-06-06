@@ -20,6 +20,7 @@ task :install => [:submodule_init, :submodules] do
   install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   install_files(Dir.glob('{vim,vimrc}'))
+  run %{ mkdir -p ~/.config/nvim }
   run %{ ln -nfs ~/.yadr/nvim ~/.config/nvim }
   run %{ touch ~/.hushlogin }
 
