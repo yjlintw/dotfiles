@@ -66,3 +66,16 @@ The keymaps for each plugin or behaviour can be found peeking at [doc](doc) fold
   * New brew packages
     * `diff-so-fancy`
     * `tidy5-html5`
+
+# Testing with Docker
+
+We can use Docker to test some changes in a **Linux** Container.
+
+Assuming your host system has Docker & Docker Compose properly installed, run:
+
+    docker-compose run dotfiles
+
+This will build the container image it never built it before (which may take a while -- future times will be faster) and then run a `zsh` session inside that container for you.
+There you can play around, test commands, aliases, etc.
+
+*Warning*: this repo is primarly OSX oriented. So any support for Linux can only be done with the help of the community.
