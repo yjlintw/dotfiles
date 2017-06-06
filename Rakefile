@@ -20,6 +20,7 @@ task :install => [:submodule_init, :submodules] do
   install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   install_files(Dir.glob('{vim,vimrc}'))
+  run %{ mkdir -p ~/.config/nvim }
   run %{ ln -nfs ~/.yadr/nvim ~/.config/nvim }
   run %{ touch ~/.hushlogin }
 
@@ -158,7 +159,7 @@ def install_prezto
   run %{ mkdir -p $HOME/.zsh.after }
   run %{ mkdir -p $HOME/.zsh.prompts }
 
-  if ENV["SHELL"].include? 'zsh' then
+  if "#{ENV['SHELL']}".include? 'zsh' then
     puts "Zsh is already configured as your shell of choice. Restart your session to load the new settings"
   else
     puts "Setting zsh as your default shell"
