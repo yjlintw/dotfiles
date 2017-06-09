@@ -14,5 +14,8 @@ before_install:
 install:
   - cd ~/.yadr && rake install
 
+before_script:
+  - zsh # starting a zsh session
+
 script:
   - ./test/install-smoke-test.sh
