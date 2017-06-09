@@ -173,7 +173,7 @@ def install_prezto
         puts "Adding zsh to standard shell list"
         run %{ echo "/usr/local/bin/zsh" | sudo tee -a /private/etc/shells }
       end
-      run %{ chsh -s /usr/local/bin/zsh }
+      run %{ sudo chsh -s /usr/local/bin/zsh $USER }
     else
       run %{ chsh -s /bin/zsh }
     end
