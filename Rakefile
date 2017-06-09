@@ -11,7 +11,7 @@ task :install => [:submodule_init, :submodules] do
   puts "======================================================"
   puts
 
-  install_homebrew if $is_macos
+  install_homebrew
 
   # this has all the runcoms from this directory.
   install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
@@ -89,22 +89,18 @@ def number_of_cores
 end
 
 def install_homebrew
-  run %{which brew}
-  unless $?.success?
-    puts "======================================================"
-    puts "Installing Homebrew, the OSX package manager...If it's"
-    puts "already installed, this will do nothing."
-    puts "======================================================"
-    run %{ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"}
-  end
+  puts "======================================================"
+  puts "Installing Homebrew, the OSX package manager...If it's"
+  puts "already installed, this will do nothing."
+  puts "======================================================"
 
-  puts
+  run %{. ./bin/install/brew.sh}
+
   puts
   puts "======================================================"
   puts "Updating Homebrew."
   puts "======================================================"
   run %{brew update}
-  puts
   puts
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
