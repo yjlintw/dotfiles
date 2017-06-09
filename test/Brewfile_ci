@@ -1,3 +1,8 @@
+tap 'homebrew/bundle'
+tap 'homebrew/completions'
+tap 'homebrew/core'
+tap 'neovim/neovim'
+
 brew 'fasd'
 brew 'hub'
 brew 'neovim'
