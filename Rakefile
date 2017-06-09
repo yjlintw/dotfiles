@@ -109,7 +109,12 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew bundle install}
+  if ENV['CI'] then
+    # A minimal Brewfile to speed up CI Builds
+    run %{brew bundle install --file=test/Brewfile_ci}
+  else
+    run %{brew bundle install}
+  end
   run %{pip3 install neovim} # For NeoVim plugins
   run %{gem install neovim} # For NeoVim plugins
   puts

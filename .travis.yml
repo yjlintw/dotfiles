@@ -7,14 +7,14 @@ matrix:
   include:
     - os: osx
       osx_image: xcode8
-    - os: osx
-      osx_image: xcode8.3
+    # - os: osx
+    #   osx_image: xcode8.3
 
 before_install:
   - mv $TRAVIS_BUILD_DIR ~/.yadr
 
 install:
-  - cd ~/.yadr && travis_wait rake install
+  - cd ~/.yadr && rake install
 
 script:
   - ./test/install-smoke-test.sh
