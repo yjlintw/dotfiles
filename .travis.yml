@@ -14,5 +14,10 @@ before_install:
 install:
   - cd ~/.yadr && rake install
 
+# The following is a caveat: we're forcing a zsh command (with the shebang),
+# as we can't simulate a login shell on Travis running the script (not that I'm aware of).
+# Ideally, after the chsh command (during the installation process)
+# we would enter a new shell session, now with zsh as our default shell,
+# and the execute the test script... ¯\_(ツ)_/¯
 script:
-  - zsh -c ./test/install-smoke-test.sh
+  - ./test/install-smoke-test.sh
