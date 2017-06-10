@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lfilho/dotfiles.svg?branch=master)](https://travis-ci.org/lfilho/dotfiles)
+
 **This is @lfilho's version of YADR. See the new README containing the changes of this fork [here](./README-lfilho.md). Below follows the original README.**
 
      _     _           _

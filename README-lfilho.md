@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lfilho/dotfiles.svg?branch=master)](https://travis-ci.org/lfilho/dotfiles)
+
 **For the original README, see [here](./README.md)**
 
 # Install (for Linux Users)
