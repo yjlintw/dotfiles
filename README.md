@@ -112,7 +112,7 @@ Here are the differences in a nutshell (also make sure you read the `How to lear
 
 - NeoVim in Terminal rather than GUI MacVim
 - Keymaps that don't rely on MacOS's <kbd>Cmd</kbd> key, so keymaps would stay cohesive in both TUI vim, GUI vim and Linux environments.
-- Testing. We have basic CI testing. See more about it in the Testing section.
+- Testing. We have basic CI testing. See more about it in the [Testing](#testing) section.
 - Different set of VIM plugins. That's too big of a list to keep up to date here in README so if you're interested you're better off comparing the two repo's plugins. What I can say is:
   - We focus less on Ruby, since it's not my most used language
   - We focus a little more on Javascript/Node
@@ -143,7 +143,14 @@ There you can play around, test commands, aliases, etc.
 
 ## Testing
 
-//TODO
+Right now we have Travis [configured](./.travis.yml) to do some basic testing:
+
+- It runs the installation for OSX (Linux soon to come)
+- And it does some smoke testing to see if installation did what's expected of it.
+
+See [.travis.yml](./.travis.yml) and the [test folder](./test/) for details.
+
+It's a very basic testing and we could definetely use some help to improve it ;-)
 
 ## Screenshots
 
