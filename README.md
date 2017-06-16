@@ -177,4 +177,4 @@ These hacks are Lion-centric. May not work for other OS'es. My favorite mods inc
 
   * Ultra fast key repeat rate (now you can scroll super quick using j/k)
   * No disk image verification (downloaded files open quicker)
-  * Display the ~/Library folder in finder (hidden in Lion)
+  * Display the `~/Library` folder in finder (hidden in Lion)
