@@ -29,7 +29,7 @@ Table of Contents:
 - [What's included, how to learn, how to customize?](#whats-included-how-to-learn-how-to-customize)
 - [Docker Support](#docker-support)
 - [Testing](#testing)
-- [Screenshots](#screenshots)
+- [Screenshot](#screenshot)
 - [Vimization of everything](#vimization-of-everything)
 - [Misc](#misc)
 - [OSX Hacks](#osx-hacks)
@@ -152,9 +152,13 @@ See [.travis.yml](./.travis.yml) and the [test folder](./test/) for details.
 
 It's a very basic testing and we could definetely use some help to improve it ;-)
 
-## Screenshots
+## Screenshot
 
-//TODO
+Here's how my zsh prompt looks like on iTerm:
+
+![](./doc/screenshot-iterm-gruvbox.png)
+
+It's using Gruvbox colors. For screenshots on how Vim looks with Gruvbox, you can check [their gallery](https://github.com/morhetz/gruvbox/wiki/Gallery) out.
 
 ## Vimization of everything
 
