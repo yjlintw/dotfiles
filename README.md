@@ -1,22 +1,63 @@
 [![Build Status](https://travis-ci.org/lfilho/dotfiles.svg?branch=master)](https://travis-ci.org/lfilho/dotfiles)
 
-**This is @lfilho's version of YADR. See the new README containing the changes of this fork [here](./README-lfilho.md). Below follows the original README.**
+**This is @lfilho's version of [YADR](https://github.com/skwp/dotfiles). Differences with upstream are explained below.**
 
      _     _           _
     | |   | |         | |
-    | |___| |_____  __| | ____
+    | |___| |_____  __| | ____     Yet Another Dotfile Repo
     |_____  (____ |/ _  |/ ___)
-     _____| / ___ ( (_| | |
+     _____| / ___ ( (_| | |        @lfilho's Version
     (_______\_____|\____|_|
 
-    # Yet Another Dotfile Repo v1.1
-    # Now with Prezto and Vundle!
+```bash
+sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
+```
 
-[![Join the chat at https://gitter.im/skwp/dotfiles](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/skwp/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+---
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-#### sh -c "\`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh \`"
 
-**Always be sure to run `rake update` after pulling to ensure plugins are updated**
+- [What is YADR?](#what-is-yadr)
+- [Installation](#installation)
+- [Differences of this fork from the original repo](#differences-of-this-fork-from-the-original-repo)
+- [How to learn your way around](#how-to-learn-your-way-around)
+- [Docker Support](#docker-support)
+- [Testing](#testing)
+- [Screenshots](#screenshots)
+- [Wait, you're not done! Do this:](#wait-youre-not-done-do-this)
+    - [Remap caps-lock to escape with Seil](#remap-caps-lock-to-escape-with-seil)
+    - [Set up a system wide hotkey for iTerm (Keys=>Hotkey)](#set-up-a-system-wide-hotkey-for-iterm-keyshotkey)
+    - [In iTerm, uncheck "Use Lion-style full screen" on General](#in-iterm-uncheck-use-lion-style-full-screen-on-general)
+  - [Upgrading](#upgrading)
+- [What's included, and how to customize?](#whats-included-and-how-to-customize)
+  - [Homebrew](#homebrew)
+  - [ZSH](#zsh)
+  - [Aliases](#aliases)
+  - [Git Customizations:](#git-customizations)
+  - [RubyGems](#rubygems)
+  - [Tmux configuration](#tmux-configuration)
+  - [Vimization of everything](#vimization-of-everything)
+  - [Github Issues: ghi gem](#github-issues-ghi-gem)
+- [Vim - What's included?](#vim---whats-included)
+    - [Navigation](#navigation)
+    - [Search/Code Navigation](#searchcode-navigation)
+    - [File Navigation](#file-navigation)
+    - [Better keystrokes for common editing commands](#better-keystrokes-for-common-editing-commands)
+    - [Tabs, Windows, Splits](#tabs-windows-splits)
+    - [Utility](#utility)
+    - [Rails & Ruby](#rails--ruby)
+    - [Vim Dev](#vim-dev)
+- [Extending and overriding YADR settings](#extending-and-overriding-yadr-settings)
+- [Misc](#misc)
+  - [OSX Hacks](#osx-hacks)
+  - [Macvim troubles with Lua?](#macvim-troubles-with-lua)
+  - [Terminal Vim troubles with Lua?](#terminal-vim-troubles-with-lua)
+  - [Pry](#pry)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+---
 
 ## What is YADR?
 
@@ -25,62 +66,82 @@
   * The best bits of all the top dotfile repos, vim and zsh plugins curated in one place, into a simple and cohesive way of working.
   * More than 90 vim plugins, all under one roof, working together, each plugin researched and configured to be at its best, often with better shortcut keys.
   * Many zsh plugins, starting with the wonderful Prezto base, and adding a few niceties on top.
-  * All things are vimized: irb, postgres command line, etc.
-
-## Mailing List
-
-Got questions, concerns, want to hear announcements? Join the [Google Group](https://groups.google.com/forum/#!forum/yadr-users)
-
-Please use GitHub Issues for pull requests or bug reports only.
-
-## Screenshot
-
-![screenshot](http://i.imgur.com/3C1Ze.png)
+  * All things are vimized: command line, irb, postgres command line, etc.
 
 ## Installation
 
 To get started please run:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
 ```
 
 **Note:** YADR will automatically install all of its subcomponents. If you want to be asked
 about each one, use:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`" -s ask
+sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`" -s ask
 ```
+
+## Differences of this fork from the original repo
+
+I've been using YADR since 2013 but since a couple of years ago my preferences and configurations started to diverge too much from upstream. So now my repo is barely mergeable with the original one. Although I'm still a contributor there, my main focus is on my fork.
+
+Here are the differences in a nutshell (also make sure you read the `How to learn your way around this repo` section):
+
+- NeoVim in Terminal rather than GUI MacVim
+- Prefer keymaps that don't rely on MacOS's <kbd>Cmd</kbd> key, so keymaps would stay cohesive in both TUI vim, GUI vim and Linux environments.
+- Testing. We have a basic CI testing. See more about it in the Testing section.
+- Different set of VIM plugins. That's too big of a list to keep up to date here in README so if you're interested you're better off comparing the two repo's plugins. What I can say is:
+  - We focus less on Ruby, since it's not my most used language
+  - We focus a little more on Javascript/Node
+  - We focus on plugins that work better with NeoVim's better features and architecture
+- Couple of new aliases for command line and also git
+- Different file and folder organization and conventions for vim plugins and configurations (all contained to installation folder)
+- Brew packages. I have added a `Brewfile` which makes easier to mantain and more flexible for the community to customize (you can point `brew` to different Brewfiles whenever you need; also easier to customize in your own fork)
+- Docker. Means you can test this repo in a Docker container without messing with your host environment until you're sure. More on that in the `Docker Support` section below.
+- Linux support. It's still very far from ideal, but it's my intention to leave the repo working for both MacOS and Linux as well as we can. The initial effort is done via the Docker support. The community can take it from there and help improve things.
+- Theme and colors. I'm not a fan of Solarized so I removed it and so far I'm enjoying Gruvbox theme (both for Vim and the terminal). There are some screenshots in the `Screenshots` section below.
+
+## How to learn your way around
+
+## Docker Support
+
+## Testing
+
+## Screenshots
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Wait, you're not done! Do this:
 
-#### Install iTerm Solarized Colors
-YADR will install Solarized colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick Solarized Dark.
-
 #### Remap caps-lock to escape with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
-The escape key is the single most used key in vim.  Old keyboards used to have Escape where Tab is today. Apple keyboards are the worst with their tiny Esc keys. But all this is fixed by remapping Caps to Escape.  If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
+
+The escape key is the single most used key in vim.  Old keyboards used to have Escape where Tab is today. Apple keyboards are the worst with their tiny Esc keys. But all this is fixed by remapping Caps to Escape. If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
+
+**TODO / IDEA**: Would be nice if anyone knows a way of automating this step.
 
 #### Set up a system wide hotkey for iTerm (Keys=>Hotkey)
-Recommended Cmd-Escape, which is really Cmd-Capslock.
+
+Recommended <kbd>Cmd</kbd>-<kbd>Esc</kbd>, which is really <kbd>Cmd</kbd>-<kbd>Capslock</kbd>.
 
 #### In iTerm, uncheck "Use Lion-style full screen" on General
+
 This will give you fast full screen windows that are switchable without switching to spaces.
-
-#### in MacVim, uncheck Prefer native fullscreen under Advanced settings
-Same as iTerm. The Lion style spaces navigation slows everything down for no reason.
-
-## If you want to run vim in terminal
-
-* Make sure you install Solarized colorscheme in your terminal!
-* If you don't want to use solarized terminal, then make sure you do this:
-
-      let g:yadr_using_unsolarized_terminal = 1
-      # in ~/.vimrc.before
-
-* If you want to use an alternate colorcheme like Gruvbox, then in your `~/.vimrc.after` do:
-
-      let g:yadr_disable_solarized_enhancements = 1
-      colorscheme base16-twilight
 
 ### Upgrading
 
