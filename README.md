@@ -17,6 +17,8 @@ sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/inst
 Table of Contents:
 
 - [Installation](#installation)
+  - [One liner for OSX](#one-liner-for-osx)
+  - [Instructions for Linux](#instructions-for-linux)
   - [Wait, you're not done! Do this:](#wait-youre-not-done-do-this)
     - [Remap caps-lock to escape with Seil](#remap-caps-lock-to-escape-with-seil)
     - [Set up a system wide hotkey for iTerm (Keys=>Hotkey)](#set-up-a-system-wide-hotkey-for-iterm-keyshotkey)
@@ -38,18 +40,33 @@ Table of Contents:
 
 ## Installation
 
+### One liner for OSX
+
 To get started please run:
 
 ```bash
 sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
 ```
 
-**Note:** YADR will automatically install all of its subcomponents. If you want to be asked
-about each one, use:
+**Note:** YADR will automatically install all of its subcomponents. If you want to be asked about each one, use:
 
 ```bash
 sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`" -s ask
 ```
+### Instructions for Linux
+
+*Please do help us improving Linux support in this repo ;-)*
+
+1. Make sure you have `zsh` installed on your machine (default location is `/bin/zsh`). Type `zsh --version` to see if you have it. If not, install it running the command `sudo apt-get install zsh`
+2. Make sure you have `vim` installed. If not, install it with `sudo apt-get install vim`
+3. Run the one liner installation script (see OSX section above)
+4. If asked, provide your superuser password
+5. Configure your terminal program to point the command to zsh (default `/bin/zsh`)
+6. Restart you Terminal
+7. You're done.
+
+*TIP*: You can check the [`Dockerfile`](./Dockerfile) to see what's need for a basic installation.
+
 ### Wait, you're not done! Do this:
 
 #### Remap caps-lock to escape with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
@@ -102,10 +119,10 @@ Here are the differences in a nutshell (also make sure you read the `How to lear
   - We focus on plugins that work better with NeoVim's better features and architecture
 - Couple of new aliases for command line and also git
 - Different file and folder organization and conventions for vim plugins and configurations (all contained to installation folder)
-- Brew packages. I have added a `Brewfile` which makes easier to mantain and more flexible for the community to customize (you can point `brew` to different Brewfiles whenever you need; also easier to customize in your own fork)
-- Docker. Means you can test this repo in a Docker container without messing with your host environment until you're sure. More on that in the `Docker Support` section below.
+- Brew packages. I have added a [`Brewfile`](./Brewfile) which makes easier to mantain and more flexible for the community to customize (you can point `brew` to different Brewfiles whenever you need; also easier to customize in your own fork)
+- Docker. Means you can test this repo in a Docker container without messing with your host environment until you're sure. More on that in the [Docker Support](#docker-support) section below.
 - Linux support. It's still very far from ideal, but it's my intention to leave the repo working for both MacOS and Linux as well as we can. The initial effort is done via the Docker support. The community can take it from there and help improve things.
-- Theme and colors. I'm not a fan of Solarized so I removed it and so far I'm enjoying Gruvbox theme (both for Vim and the terminal). There are some screenshots in the `Screenshots` section below.
+- Themes and colors. I'm not a fan of Solarized so I removed it and so far I'm enjoying Gruvbox theme (both for Vim and the terminal). I have also created my own zsh prompt. There are some screenshots in the [Screenshots](#screenshots) section below.
 
 ## What's included, how to learn, how to customize?
 
@@ -113,7 +130,16 @@ Here are the differences in a nutshell (also make sure you read the `How to lear
 
 ## Docker Support
 
-//TODO
+We can use Docker to test some changes in a Linux Container.
+
+Assuming your host system has Docker & Docker Compose properly installed, run:
+
+    docker-compose run dotfiles
+
+This will build the container image it never built it before (which may take a while -- future times will be faster) and then run a `zsh` session inside that container for you.
+There you can play around, test commands, aliases, etc.
+
+*Warning*: this repo is primarly OSX oriented. So any support for Linux can only be done with the help of the community.
 
 ## Testing
 

@@ -116,3 +116,28 @@ of plugins above to learn more.
 * [Debugging vim keymappings](doc/vim/keymaps.md)
 * [Overriding vim settings with ~/.vimrc.after and friends](doc/vim/override.md)
 * [Adding your own vim plugins](doc/vim/manage_plugins.md)
+
+---
+
+* VIM
+  * [Javascript dict](https://raw.githubusercontent.com/cooldaemon/myhome/master/.vim/dict/javascript.dict) + NeoComplete hook
+  * [Cosco.vim](http://github.com/lfilho/cosco.vim). my own plugin for comma or semi-colon easy insertion
+  * [Sideways.vim](https://github.com/AndrewRadev/sideways.vim). Makes dealing with method arguments easier
+  * [Local .vimrc](https://github.com/MarcWeber/vim-addon-local-vimrc). Loads/runs a `.vimrc` relative to the current folder (great for project specific configurations)
+  * [base16-lfilho](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
+  * [Editor Config](https://github.com/editorconfig/editorconfig-vim) plugin
+  * [Expand region](https://github.com/terryma/vim-expand-region). Hit `<enter>` to expand selection inside stuff like `(), [], {}, <>,` etc
+  * [Sparkup](https://github.com/rstacruz/sparkup). HTML Zen Coding.
+  * OSX only: [Copy-as-RTF](https://github.com/zerowidth/vim-copy-as-rtf). For copying syntax highlighted code to the clipboard and pasting, for example on Keynote, Pages, etc
+  * Beautiful Fantasque font
+  * Splits open to the right (not left) and VSplits open to the bottom (not top)
+  * Strips trailing withespace automatically upon save
+  * Perl regex style by default
+  * Markdown files are able to show fanced languages (programming blocks with syntax highlighting)
+  * Custom lightline bar
+  * NERDTree ignores `node_modules` folder
+  * Vim Function to style RequireJS imports (`:StyleRequireJsImports`)
+  * Vim Function to remove padding blank lines inside functions (`:KillBlockPadding`)
+  * Return `<C-x>` and `<C-z>` to their original functions
+    * `,,n` and `,,p` to navigate the quickfix error list
+  * `Ag` now highlights the search and doesn't open first result by default
