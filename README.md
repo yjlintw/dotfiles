@@ -100,9 +100,10 @@ This is @lfilho's fork of the great work done by Yan (@skwp), [Yadr](https://git
 
 I've been using Yadr since 2013 but since a couple of years ago my preferences and configurations started to diverge too much from upstream. So now my repo is barely mergeable with the original one. Although I'm still a contributor there, my main focus should on my fork (unless we converge again in the future of course :-)).
 
-Here are the differences in a nutshell (also make sure you read the `How to learn your way around this repo` section):
+Here are the differences in a nutshell (also make sure you read the [What's included, how to learn, how to customize?](#whats-included-how-to-learn-how-to-customize) section):
 
 - NeoVim in Terminal rather than GUI MacVim
+- Generally faster vim experience (mostly because of RipGrep and NeoVim's async stuff, but we also use less plugins)
 - Keymaps that don't rely on MacOS's <kbd>Cmd</kbd> key, so keymaps would stay cohesive in both TUI vim, GUI vim and Linux environments.
 - Testing. We have basic CI testing. See more about it in the [Testing](#testing) section.
 - Different set of VIM plugins. That's too big of a list to keep up to date here in README so if you're interested you're better off comparing the two repo's plugins. What I can say is:
