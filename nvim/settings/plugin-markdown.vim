@@ -1,6 +1,9 @@
 augroup markdown
     au!
     let g:markdown_fenced_languages = ['java', 'coffee', 'css', 'erb=eruby', 'javascript', 'js=javascript', 'json=javascript', 'ruby', 'sass', 'xml', 'html']
+
+    " Assumes you have `vmd` installed on your system
+    command! MarkdownPreview :!vmd %
 augroup END
 
 " This function/command will surround keymappings with the <kbd> tag, so it
