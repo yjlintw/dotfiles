@@ -1,17 +1,18 @@
 # What's included, How to learn? etc
 
-The files in `vim/settings` are customizations stored on a per-plugin basis.
+Browse the `plugins/*.vim` files to see which plugins we have.
 
-If you are having unexpected behavior, wondering why a particular key works the way it does, use: `:map [keycombo]` (e.g. `:map <C-\>`) to see what the key is mapped to. For bonus points, you can see where the mapping was set by using `:verbose map [keycombo]`. If you omit the key combo, you'll get a list of all the maps. You can do the same thing with `nmap`, `imap`, `vmap`, etc.
+Files in `nvim/settings` are our configurations or customizations.
+- `nvim/settings/plugin-*.vim` are configs for a specific plugin.
+- `nvim/settings/vim-*.vim` are general vim configs.
+- Whatever you **don't** see in the above files (or if a plugin doesn't have a correspondent file in there) means that we use that plugin's (or vim's) defaults.
+
+If you are having an unexpected behavior, wondering why a particular key works the way it does, use: `:map [keycombo]` (e.g. `:map <C-\>`) to see what the key is mapped to. For bonus points, you can see where the mapping was set by using `:verbose map [keycombo]`. If you omit the key combo, you'll get a list of all the maps. You can do the same thing with `nmap`, `imap`, `vmap`, etc.
 
 ## How to customize
 
 You can place any number of `*.vim` files inside the folders `before` and `after` in this dir. They'll be loaded, accordingly, before or after the main installation and configuration steps.
 If you think something could benefit everybody, feel free to open a Pull Request.
-
-## What plugins have we got?
-
-Check the `plugins/*.vim` files in this folder to see which plugins we have and `setttings/plugin-*.vim` to see how we configure / customize them.
 
 ## Search/Code Navigation
 
