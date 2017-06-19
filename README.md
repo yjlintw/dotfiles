@@ -19,8 +19,7 @@ Table of Contents:
 - [Installation](#installation)
   - [One liner for OSX](#one-liner-for-osx)
   - [Instructions for Linux](#instructions-for-linux)
-  - [Wait, you're not done! Do this:](#wait-youre-not-done-do-this)
-    - [Remap caps-lock to escape with Seil](#remap-caps-lock-to-escape-with-seil)
+  - [Wait, you're not done!](#wait-youre-not-done)
 - [Upgrading](#upgrading)
 - [What is YADR?](#what-is-yadr)
 - [What is (this fork's version of) YADR?](#what-is-this-forks-version-of-yadr)
@@ -65,11 +64,14 @@ sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/inst
 
 *TIP*: You can check the [`Dockerfile`](./Dockerfile) to see what's need for a basic installation.
 
-### Wait, you're not done! Do this:
+### Wait, you're not done!
 
-#### Remap caps-lock to escape with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
+Remap <kbd>caps-lock</kbd> to <kbd>esc</kbd>!
 
-The escape key is the single most used key in vim.  Old keyboards used to have Escape where Tab is today. Apple keyboards are the worst with their tiny Esc keys. But all this is fixed by remapping Caps to Escape. If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
+The <kbd>esc</kbd> key is the single most used key in vim. Old keyboards used to have <kbd>Esc</kbd> where Tab is today. Apple keyboards are the worst with their tiny <kbd>Esc</kbd> keys. But all this is fixed by remapping Caps to <kbd>Esc</kbd>. If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
+
+**For OSX**: with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
+**For Ubuntu**: `dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"`
 
 **TODO / IDEA**: Would be nice if anyone knows a way of automating this step.
 
