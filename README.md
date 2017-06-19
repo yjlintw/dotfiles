@@ -31,8 +31,8 @@ Table of Contents:
 - [Testing](#testing)
 - [Screenshot](#screenshot)
 - [Vimization of everything](#vimization-of-everything)
-- [Misc](#misc)
-- [OSX Hacks](#osx-hacks)
+- [OSX](#osx)
+- [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -126,7 +126,7 @@ Here are the differences in a nutshell (also make sure you read the `How to lear
 
 ## What's included, how to learn, how to customize?
 
-//TODO
+The best way to learn the answer the the above questions is to browse the README files in each directory (starting with this one). For example, if you're insterested in seeing which vim plugins are there, as well their keymaps, head to [nvim/README.md](./nvim/README.md) and start from there, proceeding to its subfolders' README and finally to each configuration file (there will be more specific comments inside each file).
 
 ## Docker Support
 
@@ -165,15 +165,11 @@ It's using Gruvbox colors. For screenshots on how Vim looks with Gruvbox, you ca
 The provided inputrc and editrc will turn your various command line tools like mysql and irb into vim prompts.
 There's also an included Ctrl-R reverse history search feature in editrc, very useful in irb, postgres command line, and etc.
 
-## Misc
+## OSX
 
-* [Credits & Thanks](doc/credits.md)
-* [Other recommended OSX productivity tools](doc/osx_tools.md)
+See [Other recommended OSX productivity tools](doc/osx_tools.md).
 
-## OSX Hacks
-
-The osx file is a bash script that sets up sensible defaults for devs and power users
-under osx. Read through it before running it. To use:
+Also, the a osx file is a bash script that sets up sensible defaults for devs and power users under osx. Read through it before running it. To use:
 
     bin/osx
 
@@ -182,3 +178,7 @@ These hacks are Lion-centric. May not work for other OS'es. My favorite mods inc
   * Ultra fast key repeat rate (now you can scroll super quick using j/k)
   * No disk image verification (downloaded files open quicker)
   * Display the `~/Library` folder in finder (hidden in Lion)
+
+## Credits
+
+See [Credits & Thanks](doc/credits.md)
