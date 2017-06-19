@@ -21,8 +21,6 @@ Table of Contents:
   - [Instructions for Linux](#instructions-for-linux)
   - [Wait, you're not done! Do this:](#wait-youre-not-done-do-this)
     - [Remap caps-lock to escape with Seil](#remap-caps-lock-to-escape-with-seil)
-    - [Set up a system wide hotkey for iTerm (Keys=>Hotkey)](#set-up-a-system-wide-hotkey-for-iterm-keyshotkey)
-    - [In iTerm, uncheck "Use Lion-style full screen" on General](#in-iterm-uncheck-use-lion-style-full-screen-on-general)
 - [Upgrading](#upgrading)
 - [What is YADR?](#what-is-yadr)
 - [What is (this fork's version of) YADR?](#what-is-this-forks-version-of-yadr)
@@ -75,14 +73,6 @@ The escape key is the single most used key in vim.  Old keyboards used to have E
 
 **TODO / IDEA**: Would be nice if anyone knows a way of automating this step.
 
-#### Set up a system wide hotkey for iTerm (Keys=>Hotkey)
-
-Recommended <kbd>Cmd</kbd>-<kbd>Esc</kbd>, which is really <kbd>Cmd</kbd>-<kbd>Capslock</kbd>.
-
-#### In iTerm, uncheck "Use Lion-style full screen" on General
-
-This will give you fast full screen windows that are switchable without switching to spaces.
-
 ## Upgrading
 
 Upgrading is easy.
@@ -119,6 +109,7 @@ Here are the differences in a nutshell (also make sure you read the `How to lear
   - We focus on plugins that work better with NeoVim's better features and architecture
 - Couple of new aliases for command line and also git
 - Different file and folder organization and conventions for vim plugins and configurations (all contained to installation folder)
+- Automated iTerm2 configuration (including themes and colors)
 - Brew packages. I have added a [`Brewfile`](./Brewfile) which makes easier to mantain and more flexible for the community to customize (you can point `brew` to different Brewfiles whenever you need; also easier to customize in your own fork)
 - Docker. Means you can test this repo in a Docker container without messing with your host environment until you're sure. More on that in the [Docker Support](#docker-support) section below.
 - Linux support. It's still very far from ideal, but it's my intention to leave the repo working for both MacOS and Linux as well as we can. The initial effort is done via the Docker support. The community can take it from there and help improve things.
