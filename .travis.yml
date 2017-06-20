@@ -9,10 +9,10 @@ matrix:
       osx_image: xcode8
 
 before_install:
-  - mv $TRAVIS_BUILD_DIR ~/.yadr
+  - ./test/travis-before-install.sh
 
 install:
-  - cd ~/.yadr && rake install
+  - ./test/travis-install.sh
 
 # The following is a caveat: we're forcing a zsh command (with the shebang),
 # as we can't simulate a login shell on Travis running the script (not that I'm aware of).
@@ -20,4 +20,4 @@ install:
 # we would enter a new shell session, now with zsh as our default shell,
 # and the execute the test script... ¯\_(ツ)_/¯
 script:
-  - ./test/install-smoke-test.sh
+  - ./test/travis-test-script.sh
