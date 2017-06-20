@@ -3,7 +3,8 @@
 Right now we have Travis configured to do some basic testing:
 
 - It runs the installation for the following OSes:
-  - OSX El Capitan
+  - MacOS El Capitan (XCode 8)
+  - MacOS Sierra (XCode 8.3.3)
   - Ubuntu 16.04 (via Docker)
 - And afterwards it does some smoke testing to see if installation did what's expected of it.
 
