@@ -72,6 +72,7 @@ Remap <kbd>caps-lock</kbd> to <kbd>esc</kbd>!
 The <kbd>esc</kbd> key is the single most used key in vim. Old keyboards used to have <kbd>Esc</kbd> where Tab is today. Apple keyboards are the worst with their tiny <kbd>Esc</kbd> keys. But all this is fixed by remapping Caps to <kbd>Esc</kbd>. If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
 
 **For OSX**: with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
+
 **For Ubuntu**: `dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"`
 
 **TODO / IDEA**: Would be nice if anyone knows a way of automating this step.
