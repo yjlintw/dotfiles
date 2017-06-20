@@ -137,14 +137,8 @@ There you can play around, test commands, aliases, etc.
 
 ## Testing
 
-Right now we have Travis [configured](./.travis.yml) to do some basic testing:
-
-- It runs the installation for OSX (Linux soon to come)
-- And it does some smoke testing to see if installation did what's expected of it.
-
-See [.travis.yml](./.travis.yml) and the [test folder](./test/) for details.
-
-It's a very basic testing and we could definetely use some help to improve it ;-)
+We have a basic automated CI testing for both Linux and OSX.
+Head to [test/README.md](./test/README.md) for more details.
 
 ## Screenshot
 
