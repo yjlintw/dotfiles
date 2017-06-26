@@ -4,6 +4,6 @@ Plug 'honza/vim-snippets' " snippets
 Plug 'josuesasilva/vim-spell-pt-br' " brazillian portuguese dict
 Plug 'othree/javascript-libraries-syntax.vim' " Syntax for JavaScript libraries
 Plug 'rstacruz/sparkup', {'rtp': 'vim'} " Write HTML code in a breeze
-Plug 'scrooloose/syntastic' " syntax checking
+Plug 'w0rp/ale' " syntax checking
 Plug 'sheerun/vim-polyglot' " syntax highlighting and indentation for many languages at once
 Plug 'skwp/vim-html-escape' " (un)escape of html entities
