@@ -26,7 +26,8 @@ let g:ctrlp_map = '<leader>t'
 nnoremap <silent> <leader>t :CtrlP<CR>
 
 " Additional mapping for buffer search
-nnoremap <silent> <leader>b :CtrlPBuffer<cr>
+" Mnemonic: *O*pen *B*uffers
+nnoremap <silent> <leader>ob :CtrlPBuffer<cr>
 
 " Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Open CtrlP starting from a particular path, making it much
