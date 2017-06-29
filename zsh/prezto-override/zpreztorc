@@ -137,3 +137,6 @@ zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+
+# Instead of 'prezto', name the default session as 'default'
+zstyle ':prezto:module:tmux' session 'default'
