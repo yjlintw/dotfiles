@@ -15,5 +15,5 @@ And everything that's in the plugins we use, of course. Please explore these peo
 Yadr is made possible by many awesome people, too many to list :) But here are a few of the bigger contributors and core committers.
 
  * Initial Version: @[skwp](https://github.com/skwp)
- * This fork: @[lilho](https://github.com/lfilho)
+ * This fork: @[lfilho](https://github.com/lfilho)
  * And everyone listed here: https://github.com/lfilho/dotfiles/graphs/contributors
