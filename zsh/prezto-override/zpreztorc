@@ -139,4 +139,4 @@ zstyle ':prezto:module:tmux:auto-start' local 'yes'
 zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Instead of 'prezto', name the default session as 'default'
-zstyle ':prezto:module:tmux' session 'default'
+zstyle ':prezto:module:tmux:session' name 'default'
