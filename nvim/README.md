@@ -22,7 +22,7 @@ If you think something could benefit everybody, feel free to open a Pull Request
  * <kbd>g</kbd><kbd>F</kbd> - standard vim mapping, here for completeness (go to file at line number)
  * <kbd>K</kbd> - Search the current word under the cursor and show results in quickfix window
  * <kbd>,</kbd><kbd>K</kbd> - Grep the current word up to next exclamation point (useful for ruby foo! methods)
- * <kbd>Cmd</kbd>-<kbd>*</kbd> - highlight all occurrences of current word (similar to regular <kbd>*</kbd> except doesn't move)
+ * <kbd>Cmd</kbd>-<kbd>\*</kbd> - highlight all occurrences of current word (similar to regular <kbd>\*</kbd> except doesn't move)
  * <kbd>,</kbd><kbd>h</kbd><kbd>l</kbd> - toggle search highlight on and off
  * <kbd>,</kbd><kbd>g</kbd><kbd>g</kbd> or <kbd>,</kbd><kbd>r</kbd><kbd>g</kbd> - Grep command line, type between quotes. Uses RipGrep.
  * After searching with <kbd>,</kbd><kbd>g</kbd><kbd>g</kbd> you can navigate the results with <kbd>Ctrl</kbd>-<kbd>x</kbd> <kbd>a</kbd>nd <kbd>Ctrl</kbd>-<kbd>z</kbd> (or standard vim `:cn` and `:cp`)
