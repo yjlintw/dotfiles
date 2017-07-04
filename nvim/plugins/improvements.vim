@@ -26,6 +26,7 @@ Plug 'tpope/vim-surround' " quoting/parenthesizing made simple
 Plug 'tpope/vim-unimpaired' " does too much to describe here :). Check the full description at its github page
 Plug 'vim-scripts/AnsiEsc.vim' " ansi escape sequences concealed. Used by some plugins. I think.
 Plug 'craigemery/vim-autotag' " Automatically discover and update ctags files on save
+Plug 'majutsushi/tagbar' " displays tags in a window, ordered by scope
 Plug 'vim-scripts/YankRing.vim' " Maintains and handles a history of previous yanks, changes and deletes
 Plug 'vim-scripts/camelcasemotion' " Motion through CamelCaseWords and underscore_notation
 Plug 'vim-scripts/lastpos.vim' " Passive. Last position jump improved.
