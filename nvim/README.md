@@ -11,7 +11,7 @@ If you are having an unexpected behavior, wondering why a particular key works t
 
 ## How to customize
 
-You can place any number of `*.vim` files inside the folders `before` and `after` in this dir. They'll be loaded, accordingly, before or after the main installation and configuration steps.
+You can place any number of `*.vim` files inside the folders `before` and `after` in the `settings` dir. They'll be loaded, accordingly, before or after the main installation and configuration steps.
 If you think something could benefit everybody, feel free to open a Pull Request.
 
 ## Search/Code Navigation
