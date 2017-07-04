@@ -15,7 +15,7 @@ vim/sessions
 bin/subl
 tags
 
-nvim/custom-settings/before/*.vim
-!nvim/custom-settings/before/main.vim
-nvim/custom-settings/after/*.vim
-!nvim/custom-settings/after/main.vim
+nvim/settings/before/*.vim
+!nvim/settings/before/main.vim
+nvim/settings/after/*.vim
+!nvim/settings/after/main.vim
