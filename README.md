@@ -9,7 +9,7 @@
 
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/lfilho/dotfiles/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/yjlintw/dotfiles/master/install.sh`"
 ```
 
 ---
