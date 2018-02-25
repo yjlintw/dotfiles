@@ -1,4 +1,5 @@
-prompt lfilho
+# prompt lfilho
+prompt powerline
 
 # Base16 Shell
 # BASE16_SHELL="$HOME/.yadr/zsh/base16-shell/base16-lfilho.dark.sh"
