@@ -9,7 +9,7 @@ Plug 'christoomey/vim-tmux-navigator' " Seamless navigation between vim and tmux
 Plug 'editorconfig/editorconfig-vim' " per project code style configs (tabs, spaces, line breaks, etc)
 Plug 'godlygeek/tabular' " Commands for easily aligning tabular data
 Plug 'goldfeld/ctrlr.vim' "Ex command history reverse-i-search for Vim
-Plug 'jby/tmux.vim' " Syntax for tmux files
+" Plug 'jby/tmux.vim' " Syntax for tmux files
 Plug 'jiangmiao/auto-pairs' " insert or delete brackets, parens, quotes in pair
 Plug 'lfilho/cosco.vim' "VIM colon and semicolon insertion bliss Edit
 Plug 'mattn/webapi-vim' " web api for vim. Required by some plugins
