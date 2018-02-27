@@ -76,3 +76,6 @@ set smartcase  " ...unless we type a capital
 
 " ================ Formatting =======================
 set formatoptions+=j " Delete comment character when joining commented lines
+
+" ================ Mouse Control ====================
+set mouse=a
