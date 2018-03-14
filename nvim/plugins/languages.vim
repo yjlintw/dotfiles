@@ -7,4 +7,5 @@
 " Plug 'w0rp/ale' " syntax checking
 Plug 'sheerun/vim-polyglot' " syntax highlighting and indentation for many languages at once
 Plug 'skwp/vim-html-escape' " (un)escape of html entities
-Plug 'Valloric/YouCompleteMe'
+Plug 'oblitum/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
