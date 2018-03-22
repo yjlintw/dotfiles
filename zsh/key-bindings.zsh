@@ -18,10 +18,11 @@ bindkey -s "^[OM" "^M"
 # Accept Autosuggestions
 bindkey '^N' autosuggest-accept
 
-# Maps Caps Lock to ESC and Control
-## Make CapsLock behave like Ctrl
-setxkbmap -option ctrl:nocaps
+if [ "$(uname 2> /dev/null)" = "Linux" ]; then
+  # Maps Caps Lock to ESC and Control
+  ## Make CapsLock behave like Ctrl
+  setxkbmap -option ctrl:nocaps
 
-## Make short-pressed Ctrl behave like Escape
-xcape -e 'Control_L=Escape'
-
+  ## Make short-pressed Ctrl behave like Escape
+  xcape -e 'Control_L=Escape'
+fi
